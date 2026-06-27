@@ -1537,6 +1537,10 @@ body {
 
 .project-description {
   font-size: 0.93rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 .tags {

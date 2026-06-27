@@ -40,14 +40,8 @@ export const projects = [
     filters: ["Agentic AI", "RAG", "Full-stack"],
     impact: "Multi-agent career workflow with evidence verification, tracing, approvals, and exports.",
     image: "/career_Pilot.png",
-    featured: true,
     description:
-      "A production-ready AI career assistant built with React, FastAPI, LangGraph, PostgreSQL, and ChromaDB to analyze resumes, compare job fit, verify evidence, generate tailored career assets, and track applications.",
-    points: [
-      "Runs a multi-agent LangGraph workflow for resume analysis, job research, skill gaps, evidence verification, tailoring, and evaluation.",
-      "Includes GitHub evidence scanning, resume versioning, human approval, agent tracing, analytics, and export-ready workflows.",
-      "Designed as a full-stack AI product with fallback logic, deployment support, and professional dashboard UX."
-    ],
+      "A full-stack AI career assistant that analyzes resumes, compares job fit, verifies evidence, generates tailored assets, and tracks applications.",
     tags: ["React", "FastAPI", "LangGraph", "ChromaDB", "PostgreSQL", "RAG", "Agentic AI"],
     github: "https://github.com/humayun-mhk/CareerPilot-AI",
     demo: "https://careerpilot-ai-frontend-h9kh.onrender.com/"
@@ -69,22 +63,34 @@ export const projects = [
     category: "RAG / Computer vision",
     filters: ["RAG", "Computer Vision", "Full-stack"],
     impact: "Queries PDFs, images, and text documents through semantic retrieval and multimodal reasoning.",
-    image: "/Gemini_Generated_Image_exs9tdexs9tdexs9.png",
+    image: "/Multi_model_Vision.png",
     description:
       "A multimodal retrieval platform that combines GPT-4o Vision, FAISS semantic search, FastAPI, and a React chat interface to query PDFs, images, and text documents.",
     tags: ["GPT-4o Vision", "FAISS", "FastAPI", "React", "RAG", "Semantic Search"],
-    github: "https://github.com/humayun-mhk/multimodal-vision-rag"
+    github: "https://github.com/humayun-mhk/multimodal-vision-rag",
+    demo: "https://multimodal-vision-rag-dfqh.vercel.app/"
   },
   {
     title: "Campus Marketplace - Flutter Buy & Sell App",
     category: "Mobile Development",
     filters: ["Mobile", "Full-stack"],
     impact: "Realtime campus marketplace with auth, listings, image upload, search, and seller communication.",
-    image: "/Campus_market_place.jpeg",
+    image: "/Campus_market_place.png",
     description:
       "A full-featured campus marketplace app built with Flutter and Firebase, enabling students to buy and sell items with real-time listings, image uploads, authentication, and direct seller communication.",
     tags: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Firebase Storage", "Image Picker"],
     github: "https://github.com/humayun-mhk/campus-marketplace"
+  },
+  {
+    title: "AI-Powered Restaurant Automation Workflow",
+    category: "AI Automation / Voice AI",
+    filters: ["AI Automation", "Agentic AI", "RAG"],
+    impact: "n8n workflow for restaurant support with voice responses, vector search, bookings, and data automation.",
+    image: "/AI_powered_Resturant_n8n.png",
+    description:
+      "An AI support and data automation workflow for restaurants built in n8n. It searches Google Drive data files, embeds menu or customer data in Pinecone, uses OpenAI for intelligent search and responses, integrates ElevenLabs voice synthesis, answers customer queries, manages bookings, confirms orders, and escalates to human support when needed.",
+    tags: ["n8n", "OpenAI", "Pinecone", "ElevenLabs", "Google Drive API", "Voice AI", "AI Automation"],
+    github: "https://lnkd.in/dZ7HEp9q"
   },
   {
     title: "TrafficIQ Traffic Detection System",
