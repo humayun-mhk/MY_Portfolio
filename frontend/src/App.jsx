@@ -3,7 +3,9 @@ import {
   education,
   experience,
   profile,
+  projectFilters,
   projects,
+  roleFocus,
   skillGroups,
   stats
 } from "./data/portfolio.js";
@@ -20,16 +22,32 @@ const navItems = [
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
   const [theme, setTheme] = useState(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored) return stored;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    return localStorage.getItem("portfolio-theme") || "light";
   });
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("main section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.28, rootMargin: "-74px 0px -52% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   function closeMenu() {
     setMenuOpen(false);
@@ -46,7 +64,11 @@ function Navbar() {
 
           <div className="nav-links">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href}>
+              <a
+                key={item.href}
+                className={activeSection === item.href.slice(1) ? "is-active" : ""}
+                href={item.href}
+              >
                 {item.label}
               </a>
             ))}
@@ -57,6 +79,7 @@ function Navbar() {
               className="theme-toggle"
               type="button"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             >
               {theme === "dark" ? "Light" : "Dark"}
             </button>
@@ -80,7 +103,12 @@ function Navbar() {
 
       <div className={`mobile-menu ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
         {navItems.map((item) => (
-          <a key={item.href} href={item.href} onClick={closeMenu}>
+          <a
+            key={item.href}
+            className={activeSection === item.href.slice(1) ? "is-active" : ""}
+            href={item.href}
+            onClick={closeMenu}
+          >
             {item.label}
           </a>
         ))}
@@ -94,12 +122,21 @@ function Hero() {
     <section className="hero" id="hero" aria-labelledby="hero-title">
       <div className="container hero-grid">
         <div className="hero-content reveal">
-          <p className="availability">{profile.availability}</p>
+          <div className="hero-eyebrow">
+            <span>{profile.availability}</span>
+            <span>{profile.location}</span>
+          </div>
           <h1 className="hero-title" id="hero-title">
             {profile.name}
           </h1>
           <p className="hero-role">{profile.role}</p>
           <p className="hero-copy">{profile.intro}</p>
+
+          <div className="role-chips" aria-label="Role focus">
+            {roleFocus.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
 
           <div className="hero-actions" aria-label="Primary actions">
             <a className="button button-primary" href={profile.resume} target="_blank" rel="noopener">
@@ -124,7 +161,14 @@ function Hero() {
           <div className="portrait-frame">
             <img src={profile.portrait} alt="Portrait of Muhammad Humayun" />
           </div>
-          <p className="portrait-note">AI / ML Engineer based in {profile.location}</p>
+          <div className="portrait-proof">
+            <p>Recruiter snapshot</p>
+            <ul>
+              <li>Full-stack AI product builder</li>
+              <li>RAG, agents, CV, APIs, deployment</li>
+              <li>Available for internships and junior AI roles</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -138,8 +182,12 @@ function ProjectCard({ project }) {
         <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
       </div>
       <div className="project-body">
-        <p className="project-meta">{project.category}</p>
+        <div className="project-topline">
+          <p className="project-meta">{project.category}</p>
+          {project.featured ? <span className="featured-badge">Top project</span> : null}
+        </div>
         <h3 className="project-title">{project.title}</h3>
+        {project.impact ? <p className="project-impact">{project.impact}</p> : null}
         <p className="project-description">{project.description}</p>
 
         {project.points?.length ? (
@@ -161,12 +209,12 @@ function ProjectCard({ project }) {
         <div className="project-actions">
           {project.github ? (
             <a className="button button-primary button-small" href={project.github} target="_blank" rel="noopener">
-              GitHub
+              View code
             </a>
           ) : null}
           {project.demo ? (
             <a className="button button-secondary button-small" href={project.demo} target="_blank" rel="noopener">
-              Live Demo
+              Live product
             </a>
           ) : null}
         </div>
@@ -176,23 +224,42 @@ function ProjectCard({ project }) {
 }
 
 function Projects() {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === "All") return projects;
+    return projects.filter((project) => project.filters?.includes(activeFilter));
+  }, [activeFilter]);
+
   return (
     <section className="section-muted" id="projects" aria-labelledby="projects-title">
       <div className="container">
         <div className="section-header reveal">
           <div>
-            <p className="section-label">Selected work</p>
             <h2 className="section-title" id="projects-title">
-              Production-minded AI systems.
+              Projects
             </h2>
           </div>
-          <p className="section-intro">
-            A focused set of full-stack AI products, RAG systems, computer vision tools, and workflow automation projects.
-          </p>
         </div>
 
+        <div className="project-toolbar reveal" aria-label="Filter projects">
+          {projectFilters.map((filter) => (
+            <button
+              className={activeFilter === filter ? "is-active" : ""}
+              key={filter}
+              type="button"
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
+        <p className="project-count reveal">
+          Showing {filteredProjects.length} project{filteredProjects.length === 1 ? "" : "s"}
+        </p>
+
         <div className="project-grid">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
@@ -207,14 +274,10 @@ function Skills() {
       <div className="container">
         <div className="section-header reveal">
           <div>
-            <p className="section-label">Technical skills</p>
             <h2 className="section-title" id="skills-title">
-              A focused AI engineering stack.
+              Skills
             </h2>
           </div>
-          <p className="section-intro">
-            Categorized for quick scanning: model development, LLM applications, backend systems, vector search, cloud deployment, and workflow automation.
-          </p>
         </div>
 
         <div className="skills-grid">
@@ -239,9 +302,8 @@ function About() {
     <section className="section-muted" id="about" aria-labelledby="about-title">
       <div className="container about-grid">
         <div className="reveal">
-          <p className="section-label">About</p>
           <h2 className="section-title" id="about-title">
-            I build AI systems with product discipline.
+            About
           </h2>
         </div>
 
@@ -267,14 +329,10 @@ function Experience() {
       <div className="container">
         <div className="section-header reveal">
           <div>
-            <p className="section-label">Experience</p>
             <h2 className="section-title" id="experience-title">
-              Practical AI engineering experience.
+              Experience
             </h2>
           </div>
-          <p className="section-intro">
-            A concise timeline focused on applied AI, measurable systems work, and production-ready engineering habits.
-          </p>
         </div>
 
         <div className="timeline">
@@ -307,9 +365,8 @@ function Education() {
     <section className="section-muted" id="education" aria-labelledby="education-title">
       <div className="container edu-grid">
         <div className="reveal">
-          <p className="section-label">Education</p>
           <h2 className="section-title" id="education-title">
-            Computer science foundation.
+            Education
           </h2>
         </div>
         <div className="info-card reveal">
@@ -354,13 +411,9 @@ function Contact() {
     <section id="contact" aria-labelledby="contact-title">
       <div className="container contact-grid">
         <div className="reveal">
-          <p className="section-label">Contact</p>
           <h2 className="section-title" id="contact-title">
-            Open to AI engineering roles and collaborations.
+            Contact
           </h2>
-          <p className="section-intro">
-            Best fit: applied AI teams building LLM applications, RAG systems, ML platforms, automation, or production computer vision tools.
-          </p>
 
           <div className="contact-links">
             <a className="contact-link" href={`mailto:${profile.email}`}>
@@ -430,7 +483,7 @@ function Footer() {
 
 function useRevealObserver() {
   useEffect(() => {
-    const elements = document.querySelectorAll(".reveal");
+    const observedElements = new WeakSet();
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -443,8 +496,22 @@ function useRevealObserver() {
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
 
-    elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    const observeReveals = () => {
+      document.querySelectorAll(".reveal").forEach((element) => {
+        if (observedElements.has(element)) return;
+        observedElements.add(element);
+        observer.observe(element);
+      });
+    };
+
+    observeReveals();
+    const mutationObserver = new MutationObserver(observeReveals);
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mutationObserver.disconnect();
+      observer.disconnect();
+    };
   }, []);
 }
 
