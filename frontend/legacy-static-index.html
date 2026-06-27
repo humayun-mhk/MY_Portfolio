@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Humayun, AI/ML Engineer building production ML systems, RAG applications, and LLM-powered products." />
+  <meta name="keywords" content="AI Engineer, ML Engineer, LLM, RAG, MLOps, Python, PyTorch, Muhammad Humayun" />
+  <meta property="og:title" content="Muhammad Humayun | AI/ML Engineer" />
+  <meta property="og:description" content="Production ML systems, RAG applications, and LLM-powered products." />
+  <meta property="og:type" content="website" />
+  <title>Muhammad Humayun | AI/ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --surface: #ffffff;
+      --surface-muted: #f1f5f9;
+      --text: #101114;
+      --text-soft: #334155;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --line-strong: #cbd5e1;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --accent-soft: #eff6ff;
+      --nav-bg: rgba(255, 255, 255, 0.9);
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      --radius: 8px;
+      --nav-height: 72px;
+      --container: 1180px;
+      --section-space: 104px;
+      --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #08090b;
+      --bg-soft: #0d0f12;
+      --surface: #111318;
+      --surface-muted: #171a20;
+      --text: #f8fafc;
+      --text-soft: #cbd5e1;
+      --muted: #94a3b8;
+      --line: #252a33;
+      --line-strong: #343b49;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --accent-soft: #111827;
+      --nav-bg: rgba(8, 9, 11, 0.9);
+      --shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-height) + 24px);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.65;
+      letter-spacing: 0;
+      text-rendering: optimizeLegibility;
+      transition: background 180ms ease, color 180ms ease;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    ::selection {
+      background: rgba(37, 99, 235, 0.16);
+      color: var(--text);
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: 16px;
+      z-index: 1000;
+      transform: translateY(-160%);
+      border-radius: var(--radius);
+      background: var(--text);
+      color: var(--bg);
+      padding: 10px 14px;
+      font-weight: 700;
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: min(100% - 48px, var(--container));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      border-bottom: 1px solid var(--line);
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(100% - 48px, var(--container));
+      height: 100%;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: color 160ms ease, background 160ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active {
+      background: var(--surface-muted);
+      color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .theme-toggle:hover,
+    .menu-toggle:hover {
+      border-color: var(--line-strong);
+      background: var(--surface-muted);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0;
+    }
+
+    .menu-toggle span {
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      transition: transform 160ms ease, opacity 160ms ease;
+    }
+
+    .menu-toggle.is-open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.is-open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: var(--nav-height) 0 auto 0;
+      z-index: 90;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+      padding: 16px 24px 24px;
+    }
+
+    .mobile-menu.is-open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      border-radius: var(--radius);
+      color: var(--text-soft);
+      font-weight: 700;
+      padding: 12px 10px;
+    }
+
+    .mobile-menu a:hover {
+      background: var(--surface-muted);
+      color: var(--text);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      padding: 0 18px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1;
+      transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .button-secondary {
+      border-color: var(--line-strong);
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .button-secondary:hover {
+      background: var(--surface-muted);
+    }
+
+    .button-small {
+      min-height: 38px;
+      padding: 0 13px;
+      font-size: 0.88rem;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      padding: var(--section-space) 0;
+    }
+
+    .section-muted {
+      border-block: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.75fr);
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 44px;
+    }
+
+    .section-label {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+      letter-spacing: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--text);
+      line-height: 1.08;
+    }
+
+    .section-title {
+      max-width: 720px;
+      margin-bottom: 0;
+      font-size: 2.65rem;
+      font-weight: 800;
+    }
+
+    .section-intro {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 1.03rem;
+    }
+
+    .hero {
+      min-height: calc(100vh - var(--nav-height));
+      display: grid;
+      align-items: center;
+      padding: 92px 0 104px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 420px;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .availability::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .hero-title {
+      max-width: 780px;
+      margin-bottom: 18px;
+      font-size: 4.7rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .hero-role {
+      margin-bottom: 22px;
+      color: var(--accent);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      margin-bottom: 34px;
+      color: var(--text-soft);
+      font-size: 1.14rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 720px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .stat-value {
+      display: block;
+      color: var(--text);
+      font-size: 1.55rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
+    .portrait-wrap {
+      justify-self: end;
+      width: min(100%, 380px);
+    }
+
+    .portrait-frame {
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 1;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--surface-muted);
+      box-shadow: var(--shadow);
+      padding: 7px;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .portrait-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: border-color 160ms ease, transform 160ms ease;
+    }
+
+    .project-card:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-2px);
+    }
+
+    .project-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+    }
+
+    .project-card.project-wide {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .project-media {
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-muted);
+      height: 210px;
+      flex-shrink: 0;
+    }
+
+    .featured .project-media {
+      width: 42%;
+      height: auto;
+      min-height: 260px;
+      border-right: 1px solid var(--line);
+      border-bottom: 0;
+    }
+
+    .project-wide .project-media {
+      width: 42%;
+      height: auto;
+      min-height: 260px;
+      border-right: 1px solid var(--line);
+      border-bottom: 0;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .project-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 20px 22px 24px;
+    }
+
+    .project-wide .project-body {
+      padding: 28px 30px;
+    }
+
+    .project-wide .project-title {
+      font-size: 1.2rem;
+    }
+
+    .project-meta {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      margin-bottom: 9px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .featured .project-title {
+      font-size: 1.2rem;
+    }
+
+    .project-description {
+      margin-bottom: 16px;
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      line-height: 1.72;
+    }
+
+    .project-points {
+      display: grid;
+      gap: 6px;
+      margin: 0 0 16px;
+      padding: 0;
+      list-style: none;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
+
+    .project-points li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .project-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: auto;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface-muted);
+      color: var(--text-soft);
+      padding: 4px 9px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .project-actions .button {
+      min-height: 34px;
+      padding: 0 11px;
+      font-size: 0.8rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card,
+    .info-card,
+    .contact-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .skill-card {
+      padding: 22px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.03rem;
+      font-weight: 800;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .skill-list li:not(:last-child)::after {
+      content: ",";
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
+      gap: 56px;
+      align-items: start;
+    }
+
+    .about-copy {
+      color: var(--text-soft);
+      font-size: 1.04rem;
+    }
+
+    .about-copy p {
+      margin-bottom: 18px;
+    }
+
+    .about-copy strong {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .focus-list li {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      color: var(--text-soft);
+    }
+
+    .focus-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+      margin-left: 8px;
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -29px;
+      top: 27px;
+      width: 9px;
+      height: 9px;
+      border: 2px solid var(--bg);
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .timeline-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 24px;
+    }
+
+    .timeline-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-role {
+      margin-bottom: 5px;
+      font-size: 1.13rem;
+      font-weight: 800;
+    }
+
+    .timeline-company,
+    .timeline-date {
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .timeline-list {
+      display: grid;
+      gap: 8px;
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--text-soft);
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+      gap: 24px;
+    }
+
+    .info-card {
+      padding: 24px;
+    }
+
+    .info-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.18rem;
+      font-weight: 800;
+    }
+
+    .info-card p {
+      margin-bottom: 0;
+      color: var(--text-soft);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .cert-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cert-list li {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+
+    .cert-name {
+      display: block;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .cert-by {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(380px, 0.9fr);
+      gap: 56px;
+      align-items: start;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      padding: 15px 0;
+      color: var(--text-soft);
+      font-weight: 700;
+    }
+
+    .contact-link span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .contact-link:hover {
+      color: var(--accent);
+    }
+
+    .contact-panel {
+      padding: 24px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 7px;
+    }
+
+    label {
+      color: var(--text);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--bg);
+      color: var(--text);
+      padding: 12px 13px;
+      outline: none;
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    textarea {
+      min-height: 138px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    }
+
+    .form-status {
+      min-height: 24px;
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .chat-launcher {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 130;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--text);
+      color: var(--bg);
+      padding: 0 16px 0 12px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .chat-launcher:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .chat-launcher-mark {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.78rem;
+      letter-spacing: 0;
+    }
+
+    .chat-widget {
+      position: fixed;
+      right: 24px;
+      bottom: 86px;
+      z-index: 130;
+      display: none;
+      flex-direction: column;
+      width: min(430px, calc(100vw - 48px));
+      max-height: min(680px, calc(100vh - 120px));
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .chat-widget.is-open {
+      display: flex;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding: 14px 16px;
+    }
+
+    .chat-title {
+      margin: 0;
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .chat-subtitle {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+
+    .chat-close {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .chat-close:hover {
+      background: var(--surface-muted);
+    }
+
+    .chat-messages {
+      display: grid;
+      gap: 12px;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    .chat-message {
+      max-width: 88%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 11px 12px;
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      white-space: pre-wrap;
+    }
+
+    .chat-message.assistant {
+      justify-self: start;
+      background: var(--surface-muted);
+    }
+
+    .chat-message.user {
+      justify-self: end;
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .chat-sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: -4px;
+    }
+
+    .chat-source {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--muted);
+      padding: 3px 7px;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .chat-status {
+      min-height: 20px;
+      padding: 0 16px 10px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .chat-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      border-top: 1px solid var(--line);
+      padding: 12px;
+      background: var(--surface);
+    }
+
+    .chat-input {
+      min-height: 42px;
+      resize: none;
+    }
+
+    .chat-send {
+      min-height: 42px;
+      padding: 0 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 520ms ease, transform 520ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) 340px;
+        gap: 48px;
+      }
+
+      .hero-title {
+        font-size: 4rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --section-space: 82px;
+      }
+
+      .nav-links,
+      .nav-actions .button {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .section-header,
+      .hero-grid,
+      .about-grid,
+      .edu-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 0;
+        padding: 68px 0 84px;
+      }
+
+      .portrait-wrap {
+        justify-self: start;
+        width: 300px;
+        max-width: 100%;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-card.featured {
+        flex-direction: column;
+      }
+
+      .project-card.project-wide {
+        flex-direction: column;
+      }
+
+      .featured .project-media {
+        width: 100%;
+        height: 210px;
+        min-height: 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project-wide .project-media {
+        width: 100%;
+        height: 240px;
+        min-height: 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+    }
+
+    @media (max-width: 680px) {
+      :root {
+        --nav-height: 68px;
+        --section-space: 68px;
+      }
+
+      .container,
+      .nav-inner {
+        width: min(100% - 32px, var(--container));
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .hero-role {
+        font-size: 1.1rem;
+      }
+
+      .hero-copy,
+      .about-copy {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 2.15rem;
+      }
+
+      .project-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured .project-title {
+        font-size: 1.05rem;
+      }
+
+      .project-wide .project-body {
+        padding: 20px 22px 24px;
+      }
+
+      .project-wide .project-title {
+        font-size: 1.05rem;
+      }
+
+      .project-wide .project-media {
+        height: 210px;
+      }
+
+      .timeline-top,
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact-link {
+        display: grid;
+      }
+
+      .contact-link span {
+        text-align: left;
+      }
+
+      .chat-launcher {
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .chat-widget {
+        right: 16px;
+        bottom: 78px;
+        width: calc(100vw - 32px);
+        max-height: calc(100vh - 104px);
+      }
+
+      .chat-message {
+        max-width: 94%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#hero" aria-label="Muhammad Humayun home">
+        <span class="brand-mark">MH</span>
+        <span>Muhammad Humayun</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark</button>
+        <a class="button button-primary button-small" href="#contact">Contact</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="availability">Available for AI engineering roles</p>
+          <h1 class="hero-title" id="hero-title">Muhammad Humayun</h1>
+          <p class="hero-role">AI Engineer building practical ML and LLM systems.</p>
+          <p class="hero-copy">
+            AI Engineer specializing in Generative AI, NLP, RAG systems, AI agents, Computer Vision, and Machine Learning. Passionate about building scalable, production-ready AI solutions that solve real-world problems.
+
+          </p>
+
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            <a class="button button-secondary" href="#contact">Contact</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Portfolio highlights">
+            <div>
+              <span class="stat-value">10+</span>
+              <span class="stat-label">AI projects shipped</span>
+            </div>
+            <div>
+              <span class="stat-value">60%</span>
+              <span class="stat-label">RAG latency reduction</span>
+            </div>
+            <div>
+              <span class="stat-value">95%</span>
+              <span class="stat-label">RAG accuracy achieved</span>
+            </div>
+            <div>
+              <span class="stat-value">3.4/4</span>
+              <span class="stat-label">Computer Science GPA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portrait-wrap reveal">
+          <div class="portrait-frame">
+            <img src="WhatsApp Image 2025-04-09 at 2.54.06 PM.jpeg" alt="Portrait of Muhammad Humayun" />
+          </div>
+          <p class="portrait-note">AI / ML Engineer based in Pakistan</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <p class="section-label">Selected work</p>
+            <h2 class="section-title" id="projects-title">Production-minded AI systems.</h2>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-wide reveal">
+            <div class="project-media">
+              <img src="career_Pilot.png" alt="CareerPilot AI dashboard preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Agentic AI / Full-stack product</p>
+              <h3 class="project-title">CareerPilot AI</h3>
+              <p class="project-description">
+                A production-ready AI career assistant built with React, FastAPI, LangGraph, PostgreSQL, and ChromaDB to analyze resumes, compare job fit, verify evidence, generate tailored career assets, and track applications.
+              </p>
+              <ul class="project-points">
+                <li>Runs a multi-agent LangGraph workflow for resume analysis, job research, skill gaps, evidence verification, tailoring, and evaluation.</li>
+                <li>Includes GitHub evidence scanning, resume versioning, human approval, agent tracing, analytics, and export-ready workflows.</li>
+                <li>Designed as a full-stack AI product with fallback logic, deployment support, and professional dashboard UX.</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">LangGraph</span>
+                <span class="tag">ChromaDB</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">RAG</span>
+                <span class="tag">Agentic AI</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/CareerPilot-AI" target="_blank" rel="noopener">GitHub</a>
+                <a class="button button-secondary button-small" href="https://careerpilot-ai-frontend-h9kh.onrender.com/" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Doctor_appointment.png" alt="AI healthcare appointment and triage platform preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Healthcare AI / Full-stack</p>
+              <h3 class="project-title">AI Healthcare Appointment &amp; Safe Triage Platform</h3>
+              <p class="project-description">
+                A production-style healthcare appointment system that books appointments, sends SMTP email notifications, and supports safe AI triage, specialty routing, RAG-based policy knowledge, doctor dashboards, admin analytics, human review, and audit logs.
+              </p>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">pgvector</span>
+                <span class="tag">RAG</span>
+                <span class="tag">AI Triage</span>
+                <span class="tag">Appointment Booking</span>
+                <span class="tag">SMTP Email</span>
+                <span class="tag">Safety Rules</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/medical-appointment-triage-ai" target="_blank" rel="noopener">GitHub</a>
+                <a class="button button-secondary button-small" href="https://medical-appointment-triage-ai.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_exs9tdexs9tdexs9.png" alt="Multimodal Vision RAG platform preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">RAG / Computer vision</p>
+              <h3 class="project-title">Multimodal Vision RAG</h3>
+              <p class="project-description">
+                A multimodal retrieval platform that combines GPT-4o Vision, FAISS semantic search, FastAPI, and a React chat interface to query PDFs, images, and text documents.
+              </p>
+              <div class="tags">
+                <span class="tag">GPT-4o Vision</span>
+                <span class="tag">FAISS</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">React</span>
+                <span class="tag">RAG</span>
+                <span class="tag">Semantic Search</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/multimodal-vision-rag" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Campus_market_place.jpeg" alt="Campus Marketplace Flutter app preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Mobile Development</p>
+              <h3 class="project-title">Campus Marketplace - Flutter Buy &amp; Sell App</h3>
+              <p class="project-description">
+                A full-featured campus marketplace application built with Flutter and Firebase, enabling students to buy and sell items with real-time listings, image uploads, authentication, and direct seller communication.
+              </p>
+              <div class="tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">Firebase Auth</span>
+                <span class="tag">Cloud Firestore</span>
+                <span class="tag">Firebase Storage</span>
+                <span class="tag">Image Picker</span>
+                <span class="tag">URL Launcher</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/campus-marketplace" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_occs0ioccs0ioccs.png" alt="TrafficIQ traffic detection dashboard preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Computer vision</p>
+              <h3 class="project-title">TrafficIQ Traffic Detection System</h3>
+              <p class="project-description">
+                Real-time vehicle detection, tracking, and counting with YOLOv8, WebSocket video streams, FastAPI services, and a multi-lane analytics dashboard.
+              </p>
+              <div class="tags">
+                <span class="tag">YOLOv8</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/TrafficIQ-End-to-End-Traffic-Detection-System" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_4ap58h4ap58h4ap5 (1).png" alt="Medical RAG chatbot preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">RAG / AWS</p>
+              <h3 class="project-title">Medical RAG Chatbot</h3>
+              <p class="project-description">
+                Medical QA chatbot using LangChain, OpenAI, and Pinecone vector search. Containerized with Docker and prepared for AWS ECR/EC2 deployment.
+              </p>
+              <div class="tags">
+                <span class="tag">LangChain</span>
+                <span class="tag">OpenAI</span>
+                <span class="tag">Pinecone</span>
+                <span class="tag">Docker</span>
+                <span class="tag">AWS EC2/ECR</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/Medical-Chatbot-RAG-LLM" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_cqk43kcqk43kcqk4.png" alt="FraudShield fraud detection preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">ML pipeline</p>
+              <h3 class="project-title">FraudShield Fraud Detection</h3>
+              <p class="project-description">
+                Real-time credit card fraud detection pipeline with SMOTE class balancing, model drift monitoring, FastAPI services, and a Streamlit dashboard.
+              </p>
+              <div class="tags">
+                <span class="tag">Random Forest</span>
+                <span class="tag">SMOTE</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Plotly</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/-FraudShield-Real-Time-Credit-Card-Fraud-Detection" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_tj6spytj6spytj6s.png" alt="Face recognition system preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Computer vision</p>
+              <h3 class="project-title">Real-Time Face Recognition</h3>
+              <p class="project-description">
+                End-to-end face detection and recognition using YOLOv8, FaceNet, and MTCNN, with Flask-SocketIO and REST APIs for identity management.
+              </p>
+              <div class="tags">
+                <span class="tag">YOLOv8</span>
+                <span class="tag">FaceNet</span>
+                <span class="tag">MTCNN</span>
+                <span class="tag">Flask</span>
+                <span class="tag">WebSockets</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/-Real-Time-Face-Recognition-System" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_1dr3kl1dr3kl1dr3.png" alt="AI digital twin system preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Generative AI</p>
+              <h3 class="project-title">AI Digital Twin System</h3>
+              <p class="project-description">
+                Memory-enhanced LLM system on AWS Bedrock that replicates personality patterns, with FastAPI services, Terraform infrastructure, Next.js, and CloudFront.
+              </p>
+              <div class="tags">
+                <span class="tag">AWS Bedrock</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">CloudFront</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/my-ai-twin-orchestrator" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_wo01cpwo01cpwo01.png" alt="NLP deep learning projects preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">NLP / Deep learning</p>
+              <h3 class="project-title">NLP Deep Learning Projects</h3>
+              <p class="project-description">
+                Text suggestion and fake news detection projects using LSTM-based models, TensorFlow, NumPy, and Streamlit interfaces for evaluation.
+              </p>
+              <div class="tags">
+                <span class="tag">TensorFlow</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Streamlit</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/Deep-Learning-Projects" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_i5axpki5axpki5ax.png" alt="AWS SageMaker ML pipeline preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">MLOps / AWS</p>
+              <h3 class="project-title">AWS SageMaker End-to-End ML</h3>
+              <p class="project-description">
+                Full ML workflow from data processing to deployed inference endpoint on SageMaker, designed around a production-style cloud MLOps workflow.
+              </p>
+              <div class="tags">
+                <span class="tag">AWS SageMaker</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">NumPy</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/aws-sagemaker-end-to-end-ml" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_ufrh56ufrh56ufrh.png" alt="AI automation workflows preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Automation</p>
+              <h3 class="project-title">AI Automation Workflows</h3>
+              <p class="project-description">
+                Advanced automation with LLM integrations, voice AI, multi-agent orchestration, and enterprise content generation pipelines using n8n.
+              </p>
+              <div class="tags">
+                <span class="tag">n8n</span>
+                <span class="tag">LLM Integration</span>
+                <span class="tag">Voice AI</span>
+                <span class="tag">Multi-agent</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/n8n-automation" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="Gemini_Generated_Image_29jern29jern29je.png" alt="Generative AI projects collection preview" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta">LLM collection</p>
+              <h3 class="project-title">Generative AI Projects Collection</h3>
+              <p class="project-description">
+                A collection of real-world LLM apps including SQL chatbots, Gemini Vision, calorie estimation, YouTube summarization, and RAG Q&A.
+              </p>
+              <div class="tags">
+                <span class="tag">LangChain</span>
+                <span class="tag">OpenAI</span>
+                <span class="tag">Gemini</span>
+                <span class="tag">Hugging Face</span>
+                <span class="tag">Streamlit</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-primary button-small" href="https://github.com/humayun-mhk/Generative-AI-Projects" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <p class="section-label">Technical skills</p>
+            <h2 class="section-title" id="skills-title">A focused AI engineering stack.</h2>
+          </div>
+          <p class="section-intro">
+            Categorized for quick scanning: model development, LLM applications, backend systems, vector search, cloud deployment, and workflow automation.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Programming</h3>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>C / C++</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Dart</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3>Machine Learning</h3>
+            <ul class="skill-list">
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>Scikit-learn</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>NLP</li>
+              <li>Deep Learning</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3>Generative AI</h3>
+            <ul class="skill-list">
+              <li>LangChain</li>
+              <li>LangGraph</li>
+              <li>CrewAI</li>
+              <li>RAG</li>
+              <li>Agentic RAG</li>
+              <li>Prompt Engineering</li>
+              <li>LoRA</li>
+              <li>Model Quantization</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3>Backend & APIs</h3>
+            <ul class="skill-list">
+              <li>FastAPI</li>
+              <li>Flask</li>
+              <li>REST APIs</li>
+              <li>React</li>
+              <li>Tailwind CSS</li>
+              <li>Web Scraping</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3>Data & Vector Stores</h3>
+            <ul class="skill-list">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>SQLite</li>
+              <li>MongoDB</li>
+              <li>Pinecone</li>
+              <li>ChromaDB</li>
+              <li>FAISS</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3>Cloud & MLOps</h3>
+            <ul class="skill-list">
+              <li>AWS</li>
+              <li>Azure</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+              <li>GitHub Actions</li>
+              <li>IaC</li>
+              <li>LLMOps</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3>Automation</h3>
+            <ul class="skill-list">
+              <li>n8n</li>
+              <li>AI Workflow Automation</li>
+              <li>API Integrations</li>
+              <li>Event-Driven Automation</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3>Developer Tools</h3>
+            <ul class="skill-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Linux</li>
+              <li>VS Code</li>
+              <li>Jupyter</li>
+              <li>Google Colab</li>
+              <li>Kaggle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="section-label">About</p>
+          <h2 class="section-title" id="about-title">I build AI systems with product discipline.</h2>
+        </div>
+
+        <div class="about-copy reveal">
+          <p>
+            I am an <strong>AI/ML Engineer</strong> with hands-on experience building machine learning systems and LLM-powered applications, from data pipelines and retrieval workflows to deployed inference endpoints.
+          </p>
+          <p>
+            My strongest work sits at the intersection of research-aware AI development and practical engineering: RAG pipelines, QLoRA fine-tuning, computer vision systems, API design, and cloud deployment.
+          </p>
+          <p>
+            I am currently pursuing a B.S. in Computer Science at UET Mardan while continuing to build portfolio projects that demonstrate real implementation depth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <p class="section-label">Experience</p>
+            <h2 class="section-title" id="experience-title">Relevant hands-on work.</h2>
+          </div>
+          <p class="section-intro">
+            A concise timeline focused on applied AI, measurable systems work, and the engineering habits behind production-ready ML applications.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="timeline-role">AI/ML Intern</h3>
+                  <p class="timeline-company">InternPe - Remote</p>
+                </div>
+                <span class="timeline-date">Jan 2026 - Apr 2026</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Worked on machine learning, deep learning, NLP, and generative AI applications.</li>
+                <li>Built and experimented with transformer-based AI models and workflows.</li>
+                <li>Improved skills in data preprocessing, model training, and AI problem solving.</li>
+                <li>Developed hands-on experience using Python and modern AI frameworks in real-world projects.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="timeline-role">Generative AI Intern</h3>
+                  <p class="timeline-company">Arch Technologies - Remote</p>
+                </div>
+                <span class="timeline-date">Dec 2025 - Mar 2026</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Built production data pipelines using quantized LLMs, including Unsloth 4-bit workflows.</li>
+                <li>Achieved 60% latency reduction and 95% accuracy in RAG systems through improved retrieval strategies.</li>
+                <li>Fine-tuned LLMs using QLoRA with an 18% performance gain under constrained VRAM.</li>
+                <li>Integrated FAISS vector search and OpenAI Whisper for voice-enabled AI applications.</li>
+                <li>Worked with LangChain, LlamaIndex, and multi-agent pipelines.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="timeline-role">NLP Intern</h3>
+                  <p class="timeline-company">Elevvo - Remote</p>
+                </div>
+                <span class="timeline-date">Sep 2025 - Nov 2025</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Developed NLP systems for question answering, summarization, and topic modeling with BERT and T5.</li>
+                <li>Achieved 87% accuracy across NLP tasks through model selection and tuning.</li>
+                <li>Improved data extraction efficiency by 40% through pipeline redesign and parallelization.</li>
+                <li>Reduced processing time by 65% with optimized preprocessing and batching strategies.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <p class="section-label">Education</p>
+            <h2 class="section-title" id="education-title">Academic background and certifications.</h2>
+          </div>
+          <p class="section-intro">
+            Formal computer science training paired with continuous learning in machine learning, MLOps, and generative AI.
+          </p>
+        </div>
+
+        <div class="edu-grid">
+          <div class="info-card reveal">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>University of Engineering & Technology, Mardan</p>
+            <div class="meta-row">
+              <span>GPA 3.4 / 4.0</span>
+              <span>2023 - 2027 expected</span>
+              <span>In progress</span>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <h3>Certifications</h3>
+            <ul class="cert-list">
+              <li>
+                <span class="cert-name">Machine Learning Specialization</span>
+                <span class="cert-by">Stanford University / DeepLearning.AI</span>
+              </li>
+              <li>
+                <span class="cert-name">MLOps Specialization</span>
+                <span class="cert-by">DeepLearning.AI</span>
+              </li>
+              <li>
+                <span class="cert-name">Generative AI Certification</span>
+                <span class="cert-by">Industry certification</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title" id="contact-title">Open to AI engineering roles and collaborations.</h2>
+          <p class="section-intro">
+            Best fit: applied AI teams building LLM applications, RAG systems, ML platforms, automation, or production computer vision tools.
+          </p>
+
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:humayunkhann47@gmail.com">
+              Email
+              <span>humayunkhann47@gmail.com</span>
+            </a>
+            <a class="contact-link" href="https://linkedin.com/in/humayun-mhk-927407251" target="_blank" rel="noopener">
+              LinkedIn
+              <span>linkedin.com/in/humayun-mhk</span>
+            </a>
+            <a class="contact-link" href="https://github.com/humayun-mhk" target="_blank" rel="noopener">
+              GitHub
+              <span>github.com/humayun-mhk</span>
+            </a>
+            <a class="contact-link" href="tel:+923140818147">
+              Phone
+              <span>+92 314 081 8147</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-panel reveal" id="contactForm">
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="button button-primary" type="submit">Send message</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; 2026 Muhammad Humayun. Built for clarity and credibility.</span>
+      <div class="footer-links">
+        <a href="https://github.com/humayun-mhk" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/humayun-mhk-927407251" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:humayunkhann47@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="chat-launcher" id="chatLauncher" type="button" aria-controls="portfolioChat" aria-expanded="false">
+    <span class="chat-launcher-mark">AI</span>
+    <span>Ask Humayun AI</span>
+  </button>
+
+  <aside class="chat-widget" id="portfolioChat" aria-label="Portfolio AI chatbot" aria-hidden="true">
+    <div class="chat-header">
+      <div>
+        <p class="chat-title">Humayun AI Assistant</p>
+        <p class="chat-subtitle">Portfolio RAG chatbot</p>
+      </div>
+      <button class="chat-close" id="chatClose" type="button" aria-label="Close chatbot">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+    <div class="chat-status" id="chatStatus" aria-live="polite"></div>
+    <form class="chat-form" id="chatForm">
+      <textarea class="chat-input" id="chatInput" rows="1" maxlength="1200" placeholder="Ask about projects, skills, experience..." required></textarea>
+      <button class="button button-primary button-small chat-send" id="chatSend" type="submit">Send</button>
+    </form>
+  </aside>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
+
+    function setTheme(theme) {
+      root.dataset.theme = theme;
+      themeToggle.textContent = theme === "dark" ? "Light" : "Dark";
+      themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      localStorage.setItem("theme", theme);
+    }
+
+    setTheme(initialTheme);
+
+    themeToggle.addEventListener("click", () => {
+      setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+    });
+
+    function closeMenu() {
+      menuToggle.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open menu");
+      mobileMenu.classList.remove("is-open");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("is-open");
+      menuToggle.classList.toggle("is-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+      document.body.classList.toggle("menu-open", isOpen);
+    });
+
+    mobileLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const activeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const activeId = entry.target.id;
+          navLinks.forEach((link) => {
+            link.classList.toggle("is-active", link.getAttribute("href") === `#${activeId}`);
+          });
+        }
+      });
+    }, { threshold: 0.34 });
+
+    sections.forEach((section) => activeObserver.observe(section));
+
+    const chatLauncher = document.getElementById("chatLauncher");
+    const portfolioChat = document.getElementById("portfolioChat");
+    const chatClose = document.getElementById("chatClose");
+    const chatForm = document.getElementById("chatForm");
+    const chatInput = document.getElementById("chatInput");
+    const chatMessages = document.getElementById("chatMessages");
+    const chatStatus = document.getElementById("chatStatus");
+    const chatSend = document.getElementById("chatSend");
+    const chatState = [];
+    const CHAT_API_URL = "https://humayun-mhk-humayun-portfolio-chatbot.hf.space/chat";
+
+    function setChatOpen(isOpen) {
+      portfolioChat.classList.toggle("is-open", isOpen);
+      portfolioChat.setAttribute("aria-hidden", String(!isOpen));
+      chatLauncher.setAttribute("aria-expanded", String(isOpen));
+      if (isOpen) {
+        chatInput.focus();
+      }
+    }
+
+    function appendChatMessage(role, content, sources = []) {
+      const message = document.createElement("div");
+      message.className = `chat-message ${role}`;
+      message.textContent = content;
+      chatMessages.appendChild(message);
+
+      if (role === "assistant" && sources.length) {
+        const sourceRow = document.createElement("div");
+        sourceRow.className = "chat-sources";
+        sources.slice(0, 4).forEach((source) => {
+          const chip = document.createElement("span");
+          chip.className = "chat-source";
+          chip.textContent = source.title;
+          sourceRow.appendChild(chip);
+        });
+        chatMessages.appendChild(sourceRow);
+      }
+
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function setChatLoading(isLoading, status = "") {
+      chatSend.disabled = isLoading;
+      chatInput.disabled = isLoading;
+      chatStatus.textContent = status;
+    }
+
+    function resizeChatInput() {
+      chatInput.style.height = "auto";
+      chatInput.style.height = `${Math.min(chatInput.scrollHeight, 120)}px`;
+    }
+
+    appendChatMessage("assistant", "Hi, I can answer questions about Humayun's projects, skills, experience, and fit for AI engineering roles.");
+
+    chatLauncher.addEventListener("click", () => {
+      setChatOpen(!portfolioChat.classList.contains("is-open"));
+    });
+
+    chatClose.addEventListener("click", () => setChatOpen(false));
+
+    chatInput.addEventListener("input", resizeChatInput);
+
+    chatInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        chatForm.requestSubmit();
+      }
+    });
+
+    chatForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const content = chatInput.value.trim();
+      if (!content) return;
+
+      chatInput.value = "";
+      resizeChatInput();
+      appendChatMessage("user", content);
+      chatState.push({ role: "user", content });
+      setChatLoading(true, "Retrieving portfolio context...");
+
+      try {
+        const response = await fetch(CHAT_API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ messages: chatState.slice(-8) })
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || "Chat request failed.");
+        }
+
+        const answer = data.answer || "I could not generate an answer for that.";
+        appendChatMessage("assistant", answer, data.sources || []);
+        chatState.push({ role: "assistant", content: answer });
+        setChatLoading(false, data.mode === "fallback" ? "Backend RAG fallback active. Add OPENAI_API_KEY as a Hugging Face Secret for model answers." : "");
+      } catch (error) {
+        appendChatMessage("assistant", "I could not reach the chatbot backend. Deploy the FastAPI backend on Hugging Face Spaces, then replace CHAT_API_URL in INDEX.HTML with your Space URL.");
+        setChatLoading(false, error.message);
+      }
+    });
+
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const name = String(formData.get("name") || "").trim();
+      const email = String(formData.get("email") || "").trim();
+      const subject = String(formData.get("subject") || "").trim();
+      const message = String(formData.get("message") || "").trim();
+
+      if (!name || !email || !subject || !message) {
+        formStatus.textContent = "Please complete all fields before sending.";
+        return;
+      }
+
+      const body = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        "",
+        message
+      ].join("\n");
+
+      window.location.href = `mailto:humayunkhann47@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      formStatus.textContent = "Opening your email app...";
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
