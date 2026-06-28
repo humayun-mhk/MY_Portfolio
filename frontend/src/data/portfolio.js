@@ -193,17 +193,6 @@ export const projects = [
     github: "https://github.com/humayun-mhk/aws-sagemaker-end-to-end-ml"
   },
   {
-    title: "AI Automation Workflows",
-    category: "Automation",
-    filters: ["Agentic AI", "Full-stack", "AI Automation"],
-    impact: "LLM automation pipelines with workflow orchestration, voice AI, and API integrations.",
-    image: "/Gemini_Generated_Image_ufrh56ufrh56ufrh.png",
-    description:
-      "Advanced automation with LLM integrations, voice AI, multi-agent orchestration, and enterprise content generation pipelines using n8n.",
-    tags: ["n8n", "LLM Integration", "Voice AI", "Multi-agent"],
-    github: "https://github.com/humayun-mhk/n8n-automation"
-  },
-  {
     title: "Generative AI Projects Collection",
     category: "LLM collection",
     filters: ["RAG", "Agentic AI"],
