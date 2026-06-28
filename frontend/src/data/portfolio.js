@@ -164,7 +164,7 @@ export const projects = [
     category: "Generative AI",
     filters: ["Agentic AI", "Full-stack", "MLOps"],
     impact: "Memory-enhanced LLM system with AWS Bedrock, infrastructure automation, and web delivery.",
-    image: "/Gemini_Generated_Image_1dr3kl1dr3kl1dr3.png",
+    image: "/AI_Digital_Twin.png",
     description:
       "Memory-enhanced LLM system on AWS Bedrock that replicates personality patterns, with FastAPI services, Terraform infrastructure, Next.js, and CloudFront.",
     tags: ["AWS Bedrock", "FastAPI", "Terraform", "Next.js", "CloudFront"],
@@ -192,17 +192,6 @@ export const projects = [
     tags: ["AWS SageMaker", "Scikit-learn", "Pandas", "NumPy"],
     github: "https://github.com/humayun-mhk/aws-sagemaker-end-to-end-ml"
   },
-  {
-    title: "Generative AI Projects Collection",
-    category: "LLM collection",
-    filters: ["RAG", "Agentic AI"],
-    impact: "Collection of LLM applications spanning SQL chat, Gemini Vision, summarization, and Q&A.",
-    image: "/Gemini_Generated_Image_29jern29jern29je.png",
-    description:
-      "A collection of real-world LLM apps including SQL chatbots, Gemini Vision, calorie estimation, YouTube summarization, and RAG Q&A.",
-    tags: ["LangChain", "OpenAI", "Gemini", "Hugging Face", "Streamlit"],
-    github: "https://github.com/humayun-mhk/Generative-AI-Projects"
-  }
 ];
 
 export const skillGroups = [
