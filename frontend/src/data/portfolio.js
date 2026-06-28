@@ -29,6 +29,7 @@ export const projectFilters = [
   "Computer Vision",
   "Full-stack",
   "AI Automation",
+  "Machine Learning",
   "MLOps",
   "Mobile"
 ];
@@ -59,6 +60,17 @@ export const projects = [
     demo: "https://medical-appointment-triage-ai.vercel.app/"
   },
   {
+    title: "End-to-End Network Security ML Project",
+    category: "MLOps / Security ML",
+    filters: ["MLOps", "Full-stack", "Machine Learning"],
+    impact: "Production ML pipeline for phishing URL detection with FastAPI, MongoDB, Docker, CI/CD, and AWS deployment.",
+    image: "/End_ML_security.png",
+    description:
+      "An end-to-end network security ML system that classifies URLs as legitimate or phishing using 31 engineered features. It includes MongoDB ingestion, validation, transformation, model training, evaluation, FastAPI inference, Docker, GitHub Actions, MLflow, AWS ECR/ECS, and production logging.",
+    tags: ["Python", "Scikit-learn", "FastAPI", "MongoDB", "Docker", "AWS ECS/ECR", "MLflow"],
+    github: "https://github.com/humayun-mhk/End_to_end_Network_Security_ML_Project"
+  },
+  {
     title: "Multimodal Vision RAG",
     category: "RAG / Computer vision",
     filters: ["RAG", "Computer Vision", "Full-stack"],
@@ -71,17 +83,6 @@ export const projects = [
     demo: "https://multimodal-vision-rag-dfqh.vercel.app/"
   },
   {
-    title: "Campus Marketplace - Flutter Buy & Sell App",
-    category: "Mobile Development",
-    filters: ["Mobile", "Full-stack"],
-    impact: "Realtime campus marketplace with auth, listings, image upload, search, and seller communication.",
-    image: "/Campus_market_place.png",
-    description:
-      "A full-featured campus marketplace app built with Flutter and Firebase, enabling students to buy and sell items with real-time listings, image uploads, authentication, and direct seller communication.",
-    tags: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Firebase Storage", "Image Picker"],
-    github: "https://github.com/humayun-mhk/campus-marketplace"
-  },
-  {
     title: "AI-Powered Restaurant Automation Workflow",
     category: "AI Automation / Voice AI",
     filters: ["AI Automation", "Agentic AI", "RAG"],
@@ -91,6 +92,28 @@ export const projects = [
       "An AI support and data automation workflow for restaurants built in n8n. It searches Google Drive data files, embeds menu or customer data in Pinecone, uses OpenAI for intelligent search and responses, integrates ElevenLabs voice synthesis, answers customer queries, manages bookings, confirms orders, and escalates to human support when needed.",
     tags: ["n8n", "OpenAI", "Pinecone", "ElevenLabs", "Google Drive API", "Voice AI", "AI Automation"],
     github: "https://lnkd.in/dZ7HEp9q"
+  },
+  {
+    title: "AI Agent Orchestrator",
+    category: "AI Automation / Multi-agent",
+    filters: ["AI Automation", "Agentic AI"],
+    impact: "n8n multi-agent automation system that routes Telegram text and voice requests to specialized agents.",
+    image: "/AI_Orchestrater_Agent.png",
+    description:
+      "An n8n-based AI agent orchestration system for Telegram text and voice inputs. It delegates tasks to agents for email, calendar scheduling, contact updates, content creation, web search, and productivity workflows using Gmail, Google Calendar, Supabase, Airtable, Tavily, OpenAI, Gemini, and Telegram.",
+    tags: ["n8n", "AI Agents", "Telegram", "OpenAI", "Gemini", "Supabase", "Airtable"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/AI%20Agent%20Orchestrator"
+  },
+  {
+    title: "Campus Marketplace - Flutter Buy & Sell App",
+    category: "Mobile Development",
+    filters: ["Mobile", "Full-stack"],
+    impact: "Realtime campus marketplace with auth, listings, image upload, search, and seller communication.",
+    image: "/Campus_market_place.png",
+    description:
+      "A full-featured campus marketplace app built with Flutter and Firebase, enabling students to buy and sell items with real-time listings, image uploads, authentication, and direct seller communication.",
+    tags: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Firebase Storage", "Image Picker"],
+    github: "https://github.com/humayun-mhk/campus-marketplace"
   },
   {
     title: "TrafficIQ Traffic Detection System",
@@ -117,7 +140,7 @@ export const projects = [
   {
     title: "FraudShield Fraud Detection",
     category: "ML pipeline",
-    filters: ["MLOps", "Full-stack"],
+    filters: ["MLOps", "Full-stack", "Machine Learning"],
     impact: "Fraud model pipeline with class balancing, drift monitoring, API service, and analytics dashboard.",
     image: "/Gemini_Generated_Image_cqk43kcqk43kcqk4.png",
     description:
@@ -161,7 +184,7 @@ export const projects = [
   {
     title: "AWS SageMaker End-to-End ML",
     category: "MLOps / AWS",
-    filters: ["MLOps"],
+    filters: ["MLOps", "Machine Learning"],
     impact: "Cloud ML workflow from data processing to deployed SageMaker inference endpoint.",
     image: "/Gemini_Generated_Image_i5axpki5axpki5ax.png",
     description:
