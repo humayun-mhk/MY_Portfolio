@@ -2,16 +2,8 @@ import { useRef, useState } from "react";
 
 const initialMessage = {
   role: "assistant",
-  content:
-    "Hi, I am Humayun's portfolio assistant. Ask me about his AI projects, RAG work, tech stack, experience, or hiring fit."
+  content: "Hi, I can help with Humayun's projects, skills, experience, and contact details."
 };
-
-const quickPrompts = [
-  "Summarize Humayun for an AI Engineer role",
-  "Which projects prove RAG experience?",
-  "What is his strongest full-stack AI project?",
-  "How can I contact him?"
-];
 
 export default function Chatbot({ apiUrl }) {
   const [open, setOpen] = useState(false);
@@ -20,7 +12,6 @@ export default function Chatbot({ apiUrl }) {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
   const messageEndRef = useRef(null);
-  const modeRef = useRef("Portfolio RAG");
   const canSend = input.trim().length > 0 && !loading;
 
   function scrollToBottom() {
@@ -65,8 +56,7 @@ export default function Chatbot({ apiUrl }) {
       };
 
       setMessages((current) => [...current, assistantMessage]);
-      modeRef.current = data.mode === "fallback" ? "RAG fallback" : "OpenAI + RAG";
-      setStatus(data.mode === "fallback" ? "Using backend RAG fallback because the model key is not active." : "");
+      setStatus(data.mode === "fallback" ? "Using portfolio knowledge base." : "");
     } catch (error) {
       setMessages((current) => [
         ...current,
@@ -120,11 +110,11 @@ export default function Chatbot({ apiUrl }) {
           <div className="chat-identity">
             <span className="chat-avatar" aria-hidden="true">AI</span>
             <div>
-            <p className="chat-title">Humayun AI Assistant</p>
-            <p className="chat-subtitle">
-              <span className="status-dot" aria-hidden="true" />
-              {modeRef.current}
-            </p>
+              <p className="chat-title">Humayun AI Assistant</p>
+              <p className="chat-subtitle">
+                <span className="status-dot" aria-hidden="true" />
+                Online
+              </p>
             </div>
           </div>
           <button className="chat-icon-button" type="button" onClick={clearChat}>
@@ -135,33 +125,11 @@ export default function Chatbot({ apiUrl }) {
           </button>
         </div>
 
-        <div className="chat-context">
-          Answers are grounded in this portfolio, GitHub projects, skills, education, and contact details.
-        </div>
-
-        <div className="quick-prompts" aria-label="Suggested recruiter questions">
-          {quickPrompts.map((prompt) => (
-            <button type="button" key={prompt} onClick={() => sendMessage(prompt)}>
-              {prompt}
-            </button>
-          ))}
-        </div>
-
         <div className="chat-messages" aria-live="polite">
           {messages.map((message, index) => (
             <div key={`${message.role}-${index}`} className={`chat-message-wrap ${message.role}`}>
               <span className="chat-message-label">{message.role === "assistant" ? "Assistant" : "You"}</span>
               <div className={`chat-message ${message.role}`}>{message.content}</div>
-              {message.sources?.length ? (
-                <div className="chat-sources">
-                  <span>Sources</span>
-                  {message.sources.slice(0, 4).map((source) => (
-                    <span className="chat-source" key={source.id || source.title}>
-                      {source.title}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
             </div>
           ))}
           {loading ? (
@@ -177,9 +145,11 @@ export default function Chatbot({ apiUrl }) {
           <div ref={messageEndRef} />
         </div>
 
-        <div className="chat-status" aria-live="polite">
-          {loading ? "Retrieving relevant portfolio evidence..." : status}
-        </div>
+        {loading || status ? (
+          <div className="chat-status" aria-live="polite">
+            {loading ? "Thinking..." : status}
+          </div>
+        ) : null}
 
         <form className="chat-form" onSubmit={handleSubmit}>
           <textarea
@@ -204,7 +174,6 @@ export default function Chatbot({ apiUrl }) {
             {loading ? "Wait" : "Send"}
           </button>
         </form>
-        <p className="chat-disclaimer">For final hiring decisions, review the linked GitHub repositories and live demos.</p>
       </aside>
     </>
   );
