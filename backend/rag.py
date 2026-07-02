@@ -178,6 +178,7 @@ PORTFOLIO_CHUNKS = [
 
 
 KNOWLEDGE_DIR = Path(__file__).resolve().parent / "knowledge"
+TEXT_KNOWLEDGE_FILES = ("Muhammad Humayun - Career Knowledge Base.txt",)
 PDF_KNOWLEDGE_FILES = ("Muhammad Humayun - Career Knowledge Base.pdf",)
 
 
@@ -237,12 +238,12 @@ def clean_pdf_text(value: str) -> str:
 
 
 def extract_pdf_text(pdf_path: Path) -> str:
+    if not pdf_path.exists():
+        return ""
+
     try:
         import fitz
     except ImportError:
-        return ""
-
-    if not pdf_path.exists():
         return ""
 
     try:
@@ -252,6 +253,18 @@ def extract_pdf_text(pdf_path: Path) -> str:
         return ""
 
     return clean_pdf_text("\n\n".join(pages))
+
+
+def extract_text_file(file_path: Path) -> str:
+    if not file_path.exists():
+        return ""
+
+    try:
+        return clean_pdf_text(file_path.read_text(encoding="utf-8"))
+    except UnicodeDecodeError:
+        return clean_pdf_text(file_path.read_text(encoding="utf-8", errors="ignore"))
+    except OSError:
+        return ""
 
 
 def split_large_block(block: str, max_chars: int) -> list[str]:
@@ -316,13 +329,36 @@ def chunk_pdf_text(text: str, max_chars: int = 1200) -> list[str]:
 def load_pdf_knowledge_chunks() -> tuple[PortfolioChunk, ...]:
     chunks: list[PortfolioChunk] = []
 
+    for file_name in TEXT_KNOWLEDGE_FILES:
+        text_path = KNOWLEDGE_DIR / file_name
+        text = extract_text_file(text_path)
+        if not text:
+            continue
+
+        for index, chunk_text in enumerate(chunk_pdf_text(text), start=1):
+            chunks.append(
+                PortfolioChunk(
+                    id=f"career-knowledge-base-{index}",
+                    title=f"Career Knowledge Base - Part {index}",
+                    content=chunk_text,
+                    tags=(
+                        "career knowledge base",
+                        "text",
+                        "muhammad humayun",
+                        "portfolio",
+                        "career",
+                    ),
+                )
+            )
+
     for file_name in PDF_KNOWLEDGE_FILES:
+        start_index = len(chunks) + 1
         pdf_path = KNOWLEDGE_DIR / file_name
         text = extract_pdf_text(pdf_path)
         if not text:
             continue
 
-        for index, chunk_text in enumerate(chunk_pdf_text(text), start=1):
+        for index, chunk_text in enumerate(chunk_pdf_text(text), start=start_index):
             chunks.append(
                 PortfolioChunk(
                     id=f"career-knowledge-base-{index}",

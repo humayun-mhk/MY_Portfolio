@@ -105,6 +105,39 @@ export const projects = [
     github: "https://github.com/humayun-mhk/n8n-automation/tree/main/AI%20Agent%20Orchestrator"
   },
   {
+    title: "AI Social Media Content Creation Automation",
+    category: "AI Automation / Content Creation",
+    filters: ["AI Automation", "Agentic AI"],
+    impact: "n8n workflow that researches campaign topics and generates LinkedIn, Facebook, and blog content.",
+    image: "/AI_Social_Media.png",
+    description:
+      "An AI-powered content automation workflow using n8n, OpenAI, Tavily, and Google Sheets. It researches campaign topics, extracts relevant web content, uses separate AI agents for LinkedIn, Facebook, and blog posts, then writes generated content back to Google Sheets for review and publishing.",
+    tags: ["n8n", "OpenAI", "Tavily API", "Google Sheets", "AI Agents", "HTTP Requests"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Content%20creation%20facebook%20%2B%20LinkedIn"
+  },
+  {
+    title: "AI Invoice Processing & Monthly Summarizer Automation",
+    category: "AI Automation / Document Processing",
+    filters: ["AI Automation", "Agentic AI"],
+    impact: "n8n workflow that extracts invoice PDFs, stores records in Notion, and generates monthly summaries.",
+    image: "/AI_Invoice.png",
+    description:
+      "An AI-powered invoice automation workflow using n8n, Gmail, Google Drive, OpenAI, and Notion. It detects invoice emails with PDF attachments, extracts invoice text, verifies invoices, parses structured fields and line items, saves records to Notion, calculates monthly totals, categorizes expenses, and sends summary emails.",
+    tags: ["n8n", "OpenAI", "Gmail API", "Google Drive", "PDF Extraction", "Notion", "Structured Output"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Invoce"
+  },
+  {
+    title: "AI Therapy Assistant — Physical Therapy Clinic Automation",
+    category: "AI Automation / Clinic Workflow",
+    filters: ["AI Automation", "Agentic AI"],
+    impact: "n8n workflow that summarizes therapy call transcripts and sends structured appointment emails.",
+    image: "/AI_Nutrition.png",
+    description:
+      "An AI-powered therapy clinic automation workflow using n8n, OpenAI Chat Models, AI Agents, webhooks, memory, and Gmail. It summarizes call transcripts, extracts client details, symptoms, appointment times, and notes, then generates structured HTML confirmation emails for clinic staff.",
+    tags: ["n8n", "OpenAI", "AI Agents", "Gmail API", "Webhooks", "Window Buffer Memory"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Nutritionist%2BAI%2BAgenT"
+  },
+  {
     title: "Campus Marketplace - Flutter Buy & Sell App",
     category: "Mobile Development",
     filters: ["Mobile", "Full-stack"],

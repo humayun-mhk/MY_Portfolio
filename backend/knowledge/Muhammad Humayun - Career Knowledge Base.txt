@@ -1,0 +1,1345 @@
+Muhammad Humayun — Career Knowledge Base
+for Personal AI Chatbot
+1. Personal Identity
+Name: Muhammad Humayun
+Professional Name: M Humayun / Muhammad Humayun
+Email: humayunmhk3@gmail.com
+Phone: +92-3140818147
+LinkedIn: https://www.linkedin.com/in/humayun-mhk-927407251/
+GitHub: https://github.com/humayun-mhk
+Portfolio: https://mhumayun-ai-engineer.vercel.app/
+Location: Pakistan
+Career Direction: AI/ML Engineer, AI Engineer Intern, Generative AI Engineer, Backend AI Engineer, Python
+Developer, AI Automation Engineer, RAG/LLM Engineer 
+2. Current Professional Positioning
+Muhammad Humayun is an AI/ML Engineer and BS Computer Science student focused on building real-
+world AI systems, Agentic AI applications, RAG pipelines, backend AI APIs, machine learning pipelines, NLP
+systems, computer vision applications, and scalable AI-powered products.
+Preferred LinkedIn headline:
+AI/ML Engineer | Building Agentic AI & Scalable Backend Systems | FastAPI | RAG | MLOps, LLMOps & AWS
+Alternative headline:
+AI/ML Engineer | Building Agentic AI & Scalable Backend Systems | FastAPI | NLP & Computer Vision |
+MLOps, LLMOps & AWS
+Professional identity:
+Muhammad Humayun is not only focused on model training. He focuses on building complete AI systems
+that connect machine learning, LLMs, backend APIs, databases, deployment, automation, and real-world
+product workflows.
+3. Education
+University: University of Engineering & Technology Mardan
+Degree: Bachelor of Science in Computer Science
+1
+
+
+Duration: Nov 2023 – Aug 2027
+Location: Mardan, Pakistan 
+Relevant Coursework:
+Artificial Intelligence
+Machine Learning
+Deep Learning
+Natural Language Processing
+Computer Vision
+Generative AI
+Database Systems
+Data Structures
+Software Engineering
+Web Development
+Data Analysis
+Academic Status: Currently pursuing BS Computer Science.
+4. Career Goal
+Muhammad Humayun’s goal is to become a strong AI Engineer who can build production-ready AI systems,
+not just notebook-based models.
+Main career targets:
+AI/ML Engineer
+AI Engineer Intern
+Generative AI Engineer
+Junior AI Engineer
+Backend AI Engineer
+Python Backend Developer
+AI Automation Engineer
+RAG Engineer
+LLM Engineer
+NLP Engineer
+Computer Vision Engineer
+MLOps / LLMOps Engineer
+Preferred roles:
+Remote AI/ML internships
+Generative AI internships
+AI Engineer internships
+Python backend roles with AI integration
+Agentic AI and RAG-based roles
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+2
+
+
+AI automation and n8n workflow roles
+Junior AI Engineer roles
+5. Professional Summary
+Muhammad Humayun is an Artificial Intelligence and Machine Learning student with hands-on experience
+building AI/ML models, Generative AI applications, LLM-powered systems, RAG pipelines, AI agents, NLP
+workflows, computer vision systems, backend AI APIs, and deployment-ready AI products.
+He is skilled in Python, FastAPI, Flask, Scikit-learn, PyTorch, TensorFlow, Hugging Face, OpenAI API, Claude,
+Gemini, LangChain, LangGraph, LlamaIndex, FAISS, ChromaDB, Pinecone, PostgreSQL, MongoDB, SQLite,
+MySQL, Docker, GitHub Actions, AWS, Git, and GitHub.
+He has practical experience in data preprocessing, feature engineering, model training, model evaluation,
+prompt engineering, retrieval-based systems, vector databases, AI agent workflows, API integrations,
+backend development, database-backed applications, and production-style deployment.
+6. Core Technical Skills
+Programming
+Python
+JavaScript
+SQL
+Backend Development
+FastAPI
+Flask
+REST APIs
+API Development
+API Integrations
+Webhooks
+Swagger Documentation
+Backend Service Design
+Real-Time Inference APIs
+File Upload APIs
+Authentication-style workflows
+Role-based workflow design
+Artificial Intelligence & Machine Learning
+Machine Learning
+Deep Learning
+Supervised Learning
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+3
+
+
+Classification
+Regression
+Feature Engineering
+Model Training
+Model Evaluation
+Error Analysis
+Batch Prediction
+Real-Time Prediction
+Experiment Tracking
+Data Analysis & Preprocessing
+Pandas
+NumPy
+Data Cleaning
+Data Preprocessing
+Feature Engineering
+Exploratory Data Analysis
+Data Validation
+Data Transformation
+Model-ready dataset preparation
+Generative AI & LLMs
+Generative AI
+Large Language Models
+OpenAI API
+Claude
+Gemini
+DeepSeek
+AWS Bedrock
+Hugging Face
+LangChain
+LangGraph
+LlamaIndex
+Prompt Engineering
+System Prompt Design
+Few-Shot Prompting
+Structured Outputs
+Tool Calling
+Function Calling
+LLM Evaluation
+Hallucination Reduction
+Response Quality Testing
+RAG & Vector Databases
+RAG Pipelines
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+4
+
+
+Agentic RAG
+FAISS
+Pinecone
+ChromaDB
+pgvector
+Embeddings
+Semantic Search
+Context Generation
+Retrieval Workflows
+Grounded AI Responses
+Document Question Answering
+AI Agents & Workflow Automation
+AI Agents
+Agentic Workflows
+Multi-Agent Systems
+LangGraph Agents
+n8n
+Workflow Automation
+Backend AI Workflows
+API-Based AI Services
+CRM Automation
+Email Automation
+NLP & Transformers
+NLP
+Transformers
+Text Classification
+Semantic Search
+Topic Modeling
+Text Preprocessing
+Tokenization
+Pre-trained Language Models
+Fine-Tuning Concepts
+Hugging Face Transformers
+Computer Vision
+OpenCV
+YOLOv8
+MTCNN
+FaceNet
+EfficientNet
+CNNs
+Transfer Learning
+Object Detection
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+5
+
+
+Image Classification
+Face Recognition
+Image Processing
+Multimodal AI
+Databases
+PostgreSQL
+MongoDB
+SQLite
+MySQL
+Firestore
+SQL Databases
+NoSQL Databases
+Database Design
+CRUD Workflows
+Data Storage
+Cloud, DevOps & Deployment
+AWS Basics
+AWS SageMaker
+AWS Bedrock
+AWS S3
+AWS ECR
+AWS ECS
+AWS CloudFront
+Docker
+GitHub Actions
+CI/CD
+Render
+MLflow
+Git
+GitHub
+Linux
+Tools
+VS Code
+Jupyter Notebook
+Google Colab
+Kaggle
+Git
+GitHub
+Docker
+Render
+AWS Console
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+6
+
+
+Soft Skills
+Problem Solving
+Fast Learning
+Communication
+Team Collaboration
+Documentation
+Adaptability
+Eagerness to Learn
+Continuous Learning
+Growth Mindset
+7. Internship Experience
+AI/ML Intern — InternPe
+Remote | Jan 2026 – Apr 2026
+Responsibilities and experience:
+Built machine learning, deep learning, NLP, and Generative AI applications using Python, Scikit-learn,
+PyTorch, TensorFlow, and FastAPI.
+Developed AI/ML workflows involving data preprocessing, feature engineering, model training,
+model evaluation, and deployment-ready inference APIs.
+Built RAG pipelines using LLMs, embeddings, vector databases, and retrieval-based context
+generation.
+Created FastAPI-based backend services to integrate AI/ML models with modern applications and
+business workflows.
+Improved model and LLM response quality through evaluation metrics, prompt testing, error
+analysis, and iterative experimentation.
+Worked with API-based AI services and backend AI workflows.
+Generative AI Intern — Arch Technologies
+Remote | Oct 2025 – Dec 2025
+Responsibilities and experience:
+Built Generative AI applications including chatbots, RAG systems, multimodal workflows, and
+automation tools.
+Integrated LLMs with vector databases, REST APIs, backend services, and workflow automation
+systems.
+Developed AI agents and retrieval workflows for business automation and intelligent user
+interaction.
+Worked on prompt engineering, tool-based workflows, API integrations, and context-aware
+response generation.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+7
+
+
+Built practical AI automation workflows using modern Generative AI tools.
+NLP Intern — Elevvo Pathways
+Remote | Sep 2025 – Oct 2025
+Responsibilities and experience:
+Built NLP solutions for text classification, semantic search, topic modeling, and language
+understanding tasks.
+Used Hugging Face Transformers and pre-trained language models for text classification, semantic
+search, and NLP experimentation.
+Implemented preprocessing, feature extraction, model training, model evaluation, and text-based AI
+workflows.
+Worked with transformers, fine-tuning concepts, and language model-based NLP tasks.
+8. Main Projects
+1. CareerPilot AI — Multi-Agent Career Assistant
+Type: Full-stack Agentic AI / Career Assistant
+Tech Stack: React, FastAPI, LangGraph, PostgreSQL or SQLite, ChromaDB, OpenAI, Render 
+Description: CareerPilot AI is a full-stack multi-agent career assistant that analyzes resumes, LinkedIn
+profiles, GitHub evidence, portfolio context, and job descriptions to generate evidence-aware career
+recommendations.
+Main features:
+Resume analysis
+LinkedIn optimization
+Job description analysis
+Job match scoring
+Skill gap analysis
+GitHub evidence scanning
+Resume tailoring
+Cover letter generation
+Project recommendations
+Application tracking
+Resume versioning
+Evaluation reports
+Agent tracing
+Human approval before saving outputs
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+8
+
+
+Engineering value: This project shows practical AI engineering skills, including multi-agent orchestration,
+RAG memory, evidence verification, API development, backend workflows, database design, and human-in-
+the-loop AI.
+Why it matters: It proves Muhammad Humayun can build more than a simple chatbot. He can build a
+complete AI product with backend APIs, frontend UI, agent workflows, database storage, and deployment.
+2. Multimodal Vision RAG
+Type: Multimodal RAG / Vision + Document AI
+Tech Stack: GPT-4o Vision, FAISS, FastAPI, React 
+Description: Multimodal Vision RAG is a platform that allows users to query PDFs, images, and text
+documents through a ChatGPT-style interface.
+Main features:
+PDF, image, and text document querying
+Multimodal input support
+Document ingestion
+Embeddings
+Semantic search
+Retrieval pipelines
+Context generation
+LLM response generation
+Backend APIs connecting frontend chat with retrieval workflows
+Engineering value: This project shows experience with RAG systems, vector search, FastAPI backend
+development, frontend integration, and multimodal AI.
+Why it matters: It is one of the strongest projects for Generative AI, RAG, LLM, LangChain-style, Hugging
+Face-style, and AI Engineer internship roles.
+3. End-to-End Network Security ML Project
+Type: Production-style Machine Learning Pipeline
+Tech Stack: Python, Scikit-learn, FastAPI, MongoDB, Docker, AWS, MLflow, GitHub Actions 
+Description: This project is a machine learning pipeline for phishing and malicious website detection.
+Main features:
+Data ingestion
+Data validation
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+9
+
+
+Data transformation
+Feature engineering
+Model training
+Model evaluation
+Batch prediction
+Real-time prediction APIs
+File upload support
+Swagger documentation
+Structured logging
+Custom exception handling
+Model artifact management
+MLflow experiment tracking
+AWS S3 integration
+Docker containerization
+CI/CD deployment using GitHub Actions, AWS ECR, and AWS ECS
+Dataset: Trained supervised ML models including Random Forest and Gradient Boosting on 11,000+ labeled
+URL samples with 31 engineered security features.
+Engineering value: This project proves Muhammad Humayun can build ML systems beyond notebooks,
+including backend APIs, MLOps practices, deployment, and real-time inference.
+Why it matters: This is one of his strongest projects for ML Engineer, AI Engineer, Python Backend Developer,
+and MLOps-focused roles.
+4. AI Healthcare Appointment & Safe Triage Platform
+Type: Full-stack AI Healthcare Platform
+Tech Stack: React, FastAPI, PostgreSQL, pgvector, AI triage workflows 
+Description: This is a production-style healthcare appointment and safe triage platform. It supports safe
+symptom intake, urgency detection, specialty routing, doctor matching, and appointment booking.
+Main features:
+Patient registration
+Login flow
+Symptom intake
+Urgency detection
+Specialty routing
+Doctor matching
+Appointment booking
+Admin dashboard
+Doctor dashboard
+Human review queue
+Notifications
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+10
+
+
+Analytics
+Audit logs
+RAG-based policy guidance
+Rule-based red flag detection
+Medical safety guardrails
+Safety design: The system avoids diagnosis or treatment advice and focuses on safe routing, review, and
+appointment support.
+Engineering value: This project proves backend AI engineering, database design, healthcare workflow
+modeling, RAG guidance, safe AI design, and full-stack product thinking.
+5. AI Restaurant Support & Voice Automation Workflow
+Type: AI Automation / Voice + RAG Workflow
+Tech Stack: n8n, OpenAI, Pinecone, ElevenLabs, Google Drive API 
+Description: This is an AI-powered restaurant support automation workflow that combines vector search,
+conversational AI, workflow automation, and voice AI.
+Main features:
+Restaurant data retrieval from Google Drive
+Embedding generation
+Menu/customer data storage in Pinecone
+Intelligent search
+OpenAI chat model integration
+ElevenLabs voice synthesis
+Customer query handling
+Booking support
+Order confirmation support
+Human escalation workflows
+Engineering value: This project shows practical AI automation, n8n workflow building, RAG search, voice
+integration, and business process automation.
+Why it matters: Strong for AI Automation Engineer, n8n Engineer, Voice Agent, AI Agent, and Generative AI
+workflow roles.
+6. Real-Time Face Recognition System
+Type: Computer Vision / Real-Time Recognition System
+Tech Stack: YOLOv8, MTCNN, FaceNet, OpenCV, Flask, SQLite 
+Description: A real-time face recognition system for identity detection and monitoring.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+11
+
+
+Main features:
+Live identity detection
+Face embedding generation
+Face recognition workflow
+Dashboard-based monitoring
+Real-time image/video processing
+SQLite record storage
+Flask-based backend workflows
+Engineering value: This project shows computer vision, real-time inference, backend integration, and
+practical AI monitoring workflows.
+Best for: Computer Vision Engineer, AI Engineer, ML Engineer, and backend-integrated AI roles.
+7. Eye Disease Classification using EfficientNetB3
+Type: Medical Computer Vision / Deep Learning
+Tech Stack: EfficientNetB3, TensorFlow, Transfer Learning 
+Description: A retinal image classification model that classifies multiple eye disease categories from medical
+images.
+Main features:
+Transfer learning
+Image preprocessing
+Normalization
+Data augmentation
+Model training
+Model evaluation
+Prediction analysis
+Engineering value: This project shows deep learning, medical image classification, TensorFlow, and transfer
+learning experience.
+Best for: Deep Learning, Computer Vision, Healthcare AI, and ML internship roles.
+8. AWS SageMaker End-to-End ML Pipeline
+Type: Cloud ML / MLOps Pipeline
+Tech Stack: AWS SageMaker, Python, ML pipeline tools 
+Description: An end-to-end ML pipeline built and deployed on AWS SageMaker for mobile phone price
+classification.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+12
+
+
+Main features:
+Preprocessing
+Model training
+Model evaluation
+Endpoint deployment
+Real-time inference
+Model lifecycle handling
+Scalable inference workflow
+Engineering value: This project shows exposure to cloud ML deployment and production-style ML
+workflows.
+Best for: MLOps, Cloud AI, AWS, and ML Engineer roles.
+9. Employee Management System
+Type: Backend / Web CRUD Application
+Tech Stack: PHP, MySQL, HTML, CSS, JavaScript, XAMPP 
+Description: A web-based employee management system with admin-style workflows.
+Main features:
+Add employee
+Edit employee
+Delete employee
+View employee records
+MySQL database connectivity
+File uploads
+Responsive pages
+Structured employee data management
+Engineering value: This project supports Python/backend/full-stack applications because it proves CRUD,
+database, and web application fundamentals.
+10. Campus Marketplace
+Type: Mobile App / Marketplace System
+Tech Stack: Flutter, Firebase Authentication, Firestore, Firebase Storage 
+Description: A campus buy-and-sell mobile app that allows students to post, browse, search, and manage
+marketplace listings.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+13
+
+
+Main features:
+Student listings
+Search
+User profiles
+Firebase Authentication
+Firestore database
+Image uploads
+Firebase Storage
+Phone/WhatsApp contact integration
+Real-time Firestore streams
+Reusable widgets
+Service-layer structure
+Engineering value: Shows mobile development, Firebase backend, real-time data, and product workflow
+thinking.
+11. PublicPulse AI
+Type: Civic AI / Accountability Prototype
+Tech Stack: Flutter or React, FastAPI, Gemini Vision or GPT Vision, LLMs, LangGraph or CrewAI, SQLite or
+PostgreSQL, FAISS or ChromaDB, pandas, pdfplumber, OCR tools 
+Description: PublicPulse AI is an AI-powered civic accountability prototype for reporting public
+infrastructure issues such as damaged roads.
+Main features:
+Upload infrastructure issue photos
+Computer vision-based issue detection
+NLP-based report generation
+Open-data matching
+Accountability scoring
+RTI request generation
+Department matching
+Project matching
+Report generation
+Prototype endpoints:
+POST /analyze-image
+/match-project
+/generate-rti
+/generate-report
+Example demo: A damaged road in Mardan is analyzed. The system identifies issue type, department,
+missing fields, accountability score, and generates an RTI-style request.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+14
+
+
+Engineering value: This is a strong future civic-tech AI project showing computer vision, NLP, open-data
+retrieval, accountability scoring, and AI report generation.
+12. Smart Retail Monitoring
+Type: Computer Vision / Retail Behavior Detection System 
+Description: Smart Retail Monitoring is a future project idea focused on using CCTV/computer vision to
+classify customer behavior into Normal, Suspicious, and Shoplifting risk categories.
+Main features:
+CCTV-based behavior monitoring
+Customer behavior classification
+Suspicious activity detection
+Shoplifting risk indicators
+Real-time monitoring dashboard
+Actionable store insights
+Human review before decisions
+Important positioning: This should not be marketed as “AI catches thieves.” It should be positioned as a
+retail safety and behavior monitoring system that supports human decision-making.
+Engineering value: Strong for computer vision, surveillance AI, real-time inference, and responsible AI roles.
+9. Best Resume Positioning by Job Type
+For AI Engineer / AI Intern roles
+Best title: Artificial Intelligence Intern | Python | Machine Learning | Generative AI | LLMs
+Best project order: 1. CareerPilot AI 2. Multimodal Vision RAG 3. End-to-End Network Security ML Project 4.
+AI Healthcare Appointment & Safe Triage Platform 5. AI Restaurant Support & Voice Automation Workflow
+Best focus:
+Python
+AI/ML models
+Generative AI
+LLMs
+RAG
+AI agents
+Data preprocessing
+Model evaluation
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+15
+
+
+FastAPI
+Real-world AI product development
+For Generative AI / LLM Intern roles
+Best title: Generative AI/ML Intern | Python | LLMs | RAG | LangChain | Hugging Face
+Best project order: 1. Multimodal Vision RAG 2. CareerPilot AI 3. AI Restaurant Support & Voice Automation
+Workflow 4. AI Healthcare Appointment & Safe Triage Platform 5. End-to-End Network Security ML Project
+Best focus:
+LLMs
+RAG
+LangChain
+Hugging Face
+Prompt Engineering
+Vector Databases
+AI Agents
+Structured Outputs
+FastAPI
+Retrieval workflows
+For Python Developer / Backend Developer roles
+Best title: Python Developer | FastAPI | Flask | REST APIs | SQL & Databases
+Best project order: 1. End-to-End Network Security ML Project 2. CareerPilot AI 3. AI Healthcare
+Appointment & Safe Triage Platform 4. Multimodal Vision RAG 5. Real-Time Face Recognition System
+Best focus:
+Python
+FastAPI
+Flask
+REST APIs
+SQL
+PostgreSQL
+MongoDB
+SQLite
+Docker
+GitHub Actions
+Swagger documentation
+CRUD workflows
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+16
+
+
+Backend API development
+Do not claim strong Django unless actually comfortable building Django applications.
+For AI Automation / n8n Engineer roles
+Best title: AI Automation Engineer | n8n Workflow Specialist | LLM & RAG Systems
+Best project order: 1. AI Restaurant Support & Voice Automation Workflow 2. CareerPilot AI 3. Multimodal
+Vision RAG 4. AI Healthcare Appointment & Safe Triage Platform 5. AI Resume Screening / Career
+automation workflows
+Best focus:
+n8n
+OpenAI
+Pinecone
+ElevenLabs
+Google Drive API
+Webhooks
+Workflow automation
+AI agents
+RAG
+Voice automation
+CRM/email automation
+For Machine Learning Engineer roles
+Best title: Machine Learning Engineer | Python | PyTorch | TensorFlow | Computer Vision | MLOps
+Best project order: 1. End-to-End Network Security ML Project 2. AWS SageMaker End-to-End ML Pipeline 3.
+Real-Time Face Recognition System 4. Eye Disease Classification using EfficientNetB3 5. Multimodal Vision
+RAG 6. CareerPilot AI
+Best focus:
+Scikit-learn
+PyTorch
+TensorFlow
+ML pipelines
+Data preprocessing
+Feature engineering
+Model training
+Model evaluation
+MLflow
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+17
+
+
+Docker
+AWS
+FastAPI inference APIs
+MLOps
+10. Certifications
+Machine Learning Specialization — Stanford University / DeepLearning.AI
+MLOps Specialization — Udemy
+Generative AI Certification — Udemy
+11. Portfolio Positioning
+Portfolio URL: https://mhumayun-ai-engineer.vercel.app/
+Portfolio should highlight:
+CareerPilot AI
+Multimodal Vision RAG
+End-to-End Network Security ML Project
+AI Healthcare Appointment & Safe Triage Platform
+AI Restaurant Support & Voice Automation Workflow
+Real-Time Face Recognition System
+AWS SageMaker ML Pipeline
+Best portfolio tagline: AI/ML Engineer building Agentic AI, RAG systems, backend AI APIs, and scalable real-
+world AI products.
+12. GitHub Positioning
+GitHub: https://github.com/humayun-mhk
+GitHub should show:
+Clean README files
+Architecture diagrams
+Tech stack badges
+Setup instructions
+Screenshots
+Demo links
+API documentation
+Environment variable examples
+Deployment notes
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+18
+
+
+Clear project purpose
+“What I learned” section
+“Future improvements” section
+Strong GitHub proof is very important because recruiters may not deeply read the resume. They often
+check whether projects are real and understandable.
+13. Application Strategy
+Best jobs to apply for:
+AI/ML Intern
+Artificial Intelligence Intern
+Generative AI Intern
+LLM Intern
+RAG Intern
+Python Backend Intern
+AI Automation Intern
+Junior AI Engineer
+Junior ML Engineer
+FastAPI Backend Developer
+AI Agent Developer
+NLP Intern
+Computer Vision Intern
+Jobs to be careful with:
+Senior AI Engineer
+Senior ML Engineer
+Roles requiring 3–5 years of experience
+Roles requiring strong Django if Django is not practiced
+Onsite roles outside Pakistan unless relocation is possible
+Roles requiring legal work authorization in another country
+Unpaid internships unless the learning value is strong
+14. Strong Application Message Template
+Muhammad Humayun is currently pursuing a BS in Computer Science and has hands-on experience in
+Python, Machine Learning, Generative AI, LLMs, RAG pipelines, AI agents, FastAPI, LangChain, vector
+databases, Docker, and real-world AI project development.
+His strongest projects include CareerPilot AI, Multimodal Vision RAG, End-to-End Network Security ML
+Project, AI Healthcare Appointment & Safe Triage Platform, and AI Restaurant Support & Voice Automation
+Workflow.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+19
+
+
+He is especially suitable for roles involving AI engineering, backend AI APIs, RAG systems, LLM applications,
+AI automation, data preprocessing, model evaluation, and production-style AI workflows.
+15. Common Short Bio
+Muhammad Humayun is a BS Computer Science student and AI/ML Engineer focused on building practical
+AI systems using Python, FastAPI, LLMs, RAG, LangChain, vector databases, machine learning, NLP,
+computer vision, Docker, and AWS. He has built several real-world AI projects including a multi-agent career
+assistant, multimodal RAG platform, healthcare AI triage system, restaurant voice automation workflow,
+and production-style ML security pipeline.
+16. Strong About Section for Chatbot
+Muhammad Humayun is an AI/ML Engineer and Computer Science student at UET Mardan. He focuses on
+building real-world AI products that combine LLMs, RAG, AI agents, machine learning, backend APIs,
+databases, and deployment. His work includes full-stack AI platforms, FastAPI-based AI backends, multi-
+agent systems, vector database retrieval, computer vision systems, and MLOps-style ML pipelines.
+He is passionate about Agentic AI, scalable backend AI systems, Generative AI, NLP, Computer Vision,
+MLOps, LLMOps, and AWS-based deployment. He is actively seeking AI Engineer, Generative AI, AI/ML
+Intern, Python Backend, and AI Automation opportunities where he can contribute to practical AI product
+development.
+17. Interview Strengths
+Strong topics:
+Python
+FastAPI
+REST APIs
+Machine Learning pipeline
+Data preprocessing
+Feature engineering
+Model evaluation
+RAG pipelines
+Vector databases
+Prompt engineering
+LangChain / LangGraph workflows
+AI agents
+Backend AI systems
+Docker
+GitHub Actions
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+20
+
+
+AWS basics
+Computer vision basics
+NLP workflows
+Deployment-ready AI APIs
+Topics to prepare carefully:
+Django, if applying to Django roles
+Advanced LoRA / QLoRA, unless fully practiced
+Advanced Kubernetes, unless practiced
+Deep cloud architecture, unless the role is junior/intern
+Legal work authorization questions for foreign countries
+18. Honest Career Positioning
+Muhammad Humayun should be positioned as an early-career AI/ML Engineer with strong project-based
+experience. His strongest advantage is not years of industry experience, but the number and quality of
+practical AI projects he has built.
+Best way to present him:
+Practical builder
+Fast learner
+Strong AI project portfolio
+Good backend + AI integration skills
+Strong understanding of LLMs, RAG, FastAPI, vector databases, and ML pipelines
+Interested in production-style AI systems
+Avoid presenting him as:
+Senior AI Engineer
+Expert in every tool
+Expert Django developer unless practiced
+Expert in LoRA/QLoRA unless he has built and can explain it properly
+Fully experienced cloud architect
+19. Best One-Line Pitch
+Muhammad Humayun is an AI/ML Engineer building Agentic AI, RAG systems, FastAPI backend AI APIs,
+machine learning pipelines, and scalable real-world AI applications.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+21
+
+
+20. Best Recruiter Pitch
+I am currently pursuing a BS in Computer Science and have hands-on experience building AI/ML models,
+Generative AI applications, LLM-powered systems, RAG pipelines, AI agents, NLP workflows, computer
+vision systems, and FastAPI-based backend AI APIs. My projects include CareerPilot AI, Multimodal Vision
+RAG, End-to-End Network Security ML Project, AI Healthcare Appointment & Safe Triage Platform, and AI
+Restaurant Support & Voice Automation Workflow. I am actively looking for AI Engineer, Generative AI, AI/
+ML Intern, Python Backend, and AI Automation opportunities where I can contribute to real-world AI
+product development.
+21. Personality and Work Style
+Muhammad Humayun is serious about building an AI career and wants practical, direct, and honest career
+guidance. He prefers simple, clear explanations and actionable steps. He values project-based learning,
+real-world implementation, and career-focused improvement.
+Preferred communication style:
+Clear
+Direct
+Practical
+Simple words
+No unnecessary theory
+Resume and job-market focused
+Honest rating and improvement advice
+Strong but not fake positioning
+22. Chatbot Behavior Instructions
+A chatbot representing Muhammad Humayun should answer in a professional, confident, and honest tone.
+The chatbot should highlight:
+AI/ML engineering background
+Backend AI systems
+FastAPI
+RAG
+LLMs
+Agentic AI
+Python
+Machine Learning
+NLP
+Computer Vision
+MLOps / LLMOps
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+22
+
+
+AWS basics
+Real-world project experience
+The chatbot should not overclaim:
+Senior-level experience
+Strong Django expertise unless confirmed
+Advanced LoRA/QLoRA expertise unless confirmed
+Full legal work authorization in another country unless confirmed
+Full-time availability if academic schedule conflicts
+The chatbot should be able to answer:
+Who is Muhammad Humayun?
+What does he do?
+What are his strongest skills?
+What projects has he built?
+What roles is he targeting?
+What is his education?
+What is his portfolio?
+What is his GitHub?
+Why should a company hire him?
+What makes him different from other interns?
+What is his experience with AI agents, RAG, FastAPI, ML, NLP, and computer vision?
+23. Final High-Level Profile
+Muhammad Humayun is a BS Computer Science student at UET Mardan and an AI/ML Engineer focused on
+building Agentic AI and scalable backend AI systems. He has hands-on experience with Python, FastAPI,
+machine learning, deep learning, LLMs, RAG, LangChain, LangGraph, vector databases, NLP, computer
+vision, Docker, AWS, and deployment-ready AI applications.
+His strongest projects include CareerPilot AI, a full-stack multi-agent career assistant; Multimodal Vision
+RAG, a document/image/text question-answering system; End-to-End Network Security ML Project, a
+production-style ML pipeline with FastAPI and AWS; AI Healthcare Appointment & Safe Triage Platform, a
+safe healthcare workflow system; and AI Restaurant Support & Voice Automation Workflow, an n8n-based
+voice and RAG automation system.
+He is actively seeking AI Engineer, AI/ML Intern, Generative AI, Python Backend, RAG, LLM, and AI
+Automation roles where he can apply his practical project experience to real-world AI product development.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+23
