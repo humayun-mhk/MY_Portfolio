@@ -244,29 +244,43 @@ export const experience = [
     company: "InternPe - Remote",
     date: "Jan 2026 - Apr 2026",
     bullets: [
-      "Built machine learning, deep learning, NLP, and generative AI projects using Python and modern AI frameworks.",
-      "Developed RAG pipelines using LLMs, embeddings, and vector databases for document question answering.",
-      "Created AI-powered workflows using OpenAI APIs, prompt engineering, and backend integrations."
+      "Built production-style Machine Learning, NLP, Generative AI, and RAG applications using Python, FastAPI, Scikit-learn, PyTorch, TensorFlow, Hugging Face, and MLOps tools.",
+      "Developed FraudShield v2 using 284,807 transaction records and improved fraud recall to over 82%, F1-score to over 0.87, and ROC-AUC to approximately 0.993.",
+      "Built SmartSupport AI using 59,579 multilingual support tickets across five languages, 62 queue categories, and five priority levels.",
+      "Implemented MLflow experiment tracking, DVC pipelines, Docker, GitHub Actions CI/CD, FastAPI inference services, and React dashboards."
     ]
   },
   {
     role: "Generative AI Intern",
     company: "Arch Technologies - Remote",
-    date: "Dec 2025 - Mar 2026",
+    date: "Oct 2025 - Dec 2025",
     bullets: [
-      "Built generative AI applications including chatbots, RAG systems, multimodal AI workflows, and NLP tools.",
-      "Integrated LLMs with vector databases, REST APIs, and backend services for practical automation use cases.",
-      "Designed retrieval-based context generation and prompt workflows for business automation."
+      "Built an Enterprise Knowledge Copilot using FastAPI, React, LangChain, LangGraph, hybrid RAG, BM25, reranking, and citation-based answer validation.",
+      "Improved retrieval Recall@5 from 73.55% to 91.39% and MRR from 64.65% to 79.94% across a 248-question benchmark.",
+      "Developed a LangGraph validation agent that verified factual claims against retrieved evidence.",
+      "Achieved 95.31% citation precision while revising or refusing unsupported answers."
+    ]
+  },
+  {
+    role: "Freelance AI Automation Developer",
+    company: "Freelance - Remote",
+    date: "Sep 2025 - Dec 2025",
+    bullets: [
+      "Delivered AI automation, data extraction, content intelligence, email automation, and agentic chatbot solutions for a remote client.",
+      "Built an n8n workflow that extracted product names, specifications, prices, and images from a 29-page DreBon Air Tools catalogue and stored each item in Airtable.",
+      "Developed an AI-powered LinkedIn competitor intelligence system using n8n, Apify, OpenAI, PostgreSQL, Supabase, and JavaScript.",
+      "Created AI agents for competitor discovery, post classification, content-style analysis, brand-aligned content generation, and customer workflow routing."
     ]
   },
   {
     role: "NLP Intern",
-    company: "Elevvo - Remote",
-    date: "Sep 2025 - Nov 2025",
+    company: "Elevvo Pathways - Remote",
+    date: "Sep 2025 - Oct 2025",
     bullets: [
-      "Built NLP solutions for text classification, semantic search, topic modeling, and language understanding tasks.",
-      "Used transformers, pre-trained language models, and fine-tuning techniques for NLP applications.",
-      "Implemented preprocessing, feature extraction, model training, and evaluation pipelines for text data."
+      "Built NLP applications for text classification, sentiment analysis, semantic search, topic modeling, and language understanding.",
+      "Implemented text preprocessing, tokenization, feature extraction, model training, and inference workflows.",
+      "Worked with BERT and Hugging Face Transformers for transformer-based NLP tasks.",
+      "Evaluated models using precision, recall, F1-score, confusion matrices, and prediction-error analysis."
     ]
   }
 ];
