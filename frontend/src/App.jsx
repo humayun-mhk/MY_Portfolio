@@ -6,8 +6,7 @@ import {
   projectFilters,
   projects,
   roleFocus,
-  skillGroups,
-  stats
+  skillGroups
 } from "./data/portfolio.js";
 import Chatbot from "./components/Chatbot.jsx";
 
@@ -147,14 +146,6 @@ function Hero() {
             </a>
           </div>
 
-          <div className="hero-stats" aria-label="Portfolio highlights">
-            {stats.map((item) => (
-              <div key={item.label}>
-                <span className="stat-value">{item.value}</span>
-                <span className="stat-label">{item.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="portrait-wrap reveal">

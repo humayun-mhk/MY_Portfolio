@@ -15,13 +15,6 @@ export const profile = {
 
 export const roleFocus = ["RAG Systems", "AI Agents", "FastAPI Backends", "Computer Vision", "MLOps"];
 
-export const stats = [
-  { value: "14+", label: "production-style projects" },
-  { value: "6", label: "RAG and LLM systems" },
-  { value: "5", label: "deployed full-stack apps" },
-  { value: "2027", label: "BSCS graduation" }
-];
-
 export const projectFilters = [
   "All",
   "Agentic AI",
