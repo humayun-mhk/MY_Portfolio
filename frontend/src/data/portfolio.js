@@ -229,6 +229,8 @@ export const projects = [
 
 export const skillGroups = [
   { title: "Programming", items: ["Python", "JavaScript", "SQL", "Dart", "C / C++"] },
+  { title: "Web Development", items: ["HTML", "CSS", "JavaScript", "React", "PHP", "Databases"] },
+  { title: "App Development", items: ["Dart", "Flutter", "Firebase", "Cloud Firestore", "Realtime Database"] },
   { title: "Machine Learning", items: ["PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "NLP", "Deep Learning"] },
   { title: "Generative AI", items: ["LangChain", "LangGraph", "CrewAI", "RAG", "Agentic RAG", "Prompt Engineering", "LoRA"] },
   { title: "Backend & APIs", items: ["FastAPI", "Flask", "REST APIs", "React", "Tailwind CSS", "Web Scraping"] },
