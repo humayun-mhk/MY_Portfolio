@@ -1,4 +1,4 @@
-export const profile = {
+﻿export const profile = {
   name: "Muhammad Humayun",
   role: "AI Engineer building production-minded RAG, agentic AI, and computer vision systems.",
   location: "Pakistan",
@@ -120,7 +120,7 @@ export const projects = [
     github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Invoce"
   },
   {
-    title: "AI Therapy Assistant — Physical Therapy Clinic Automation",
+    title: "AI Therapy Assistant â€” Physical Therapy Clinic Automation",
     category: "AI Automation / Clinic Workflow",
     filters: ["AI Automation", "Agentic AI"],
     impact: "n8n workflow that summarizes therapy call transcripts and sends structured appointment emails.",
@@ -184,6 +184,17 @@ export const projects = [
       "End-to-end face detection and recognition using YOLOv8, FaceNet, and MTCNN, with Flask-SocketIO and REST APIs for identity management.",
     tags: ["YOLOv8", "FaceNet", "MTCNN", "Flask", "WebSockets"],
     github: "https://github.com/humayun-mhk/-Real-Time-Face-Recognition-System"
+  },
+  {
+    title: "Eye Disease Classification using EfficientNetB3",
+    category: "Computer Vision / Deep Learning",
+    filters: ["Computer Vision", "Machine Learning"],
+    impact: "Retinal image classifier for Normal, Diabetic Retinopathy, Cataract, and Glaucoma using EfficientNetB3 transfer learning.",
+    image: "/Eye_disease.png",
+    description:
+      "A deep learning project for automated retinal image classification across four disease categories. It uses EfficientNetB3 pretrained on ImageNet, data augmentation, TensorFlow/Keras, and a 4,217-image dataset split into train, validation, and test sets.",
+    tags: ["EfficientNetB3", "TensorFlow", "Keras", "OpenCV", "Transfer Learning", "Medical AI"],
+    github: "https://github.com/humayun-mhk/Eye-Disease-Classification-using-EfficientNetB3#%EF%B8%8F-eye-disease-classification-using-efficientnetb3"
   },
   {
     title: "AI Digital Twin System",
@@ -288,3 +299,4 @@ export const education = {
   note:
     "Studying computer science while building production-style AI engineering projects across RAG, agents, computer vision, automation, backend systems, and cloud deployment."
 };
+
