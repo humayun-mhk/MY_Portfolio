@@ -236,6 +236,7 @@ export const skillGroups = [
   { title: "Web Development", items: ["HTML", "CSS", "JavaScript", "React", "PHP", "Databases"] },
   { title: "App Development", items: ["Dart", "Flutter", "Firebase", "Cloud Firestore", "Realtime Database"] },
   { title: "Machine Learning", items: ["PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "NLP", "Deep Learning"] },
+  { title: "Computer Vision", items: ["OpenCV", "YOLO", "Image Preprocessing", "Image Classification", "Object Detection", "Segmentation", "Transfer Learning", "Vision Models"] },
   { title: "Generative AI", items: ["LangChain", "LangGraph", "CrewAI", "RAG", "Agentic RAG", "Prompt Engineering", "LoRA"] },
   { title: "Backend & APIs", items: ["FastAPI", "Flask", "REST APIs", "React", "Tailwind CSS", "Web Scraping"] },
   { title: "Data & Vector Stores", items: ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Pinecone", "ChromaDB", "FAISS"] },
@@ -299,4 +300,5 @@ export const education = {
   note:
     "Studying computer science while building production-style AI engineering projects across RAG, agents, computer vision, automation, backend systems, and cloud deployment."
 };
+
 
