@@ -131,6 +131,47 @@ export const projects = [
     github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Nutritionist%2BAI%2BAgenT"
   },
   {
+    title: "AI Receptionist Agent for Dental Clinics",
+    category: "AI Automation / Voice Agent",
+    filters: ["AI Automation", "Agentic AI"],
+    impact: "Vapi voice receptionist that checks slots, books appointments, suggests alternatives, and logs calls.",
+    image: "/AI Reciptionist.png",
+    description:
+      "A real-time voice AI receptionist for dental clinics built with n8n, Vapi, OpenAI, Python, and Airtable. It receives call data through webhooks, checks live appointment availability, books open slots, suggests alternatives when needed, logs calls for analytics, and returns structured responses back to Vapi.",
+    tags: ["n8n", "Vapi", "OpenAI", "Python", "Airtable", "Webhooks", "Voice AI"]
+  },
+  {
+    title: "WhatsApp AI Appointment Booking Agent",
+    category: "AI Automation / Appointment Booking",
+    filters: ["AI Automation", "Agentic AI"],
+    impact: "WhatsApp booking assistant that qualifies leads, checks calendar availability, books meetings, and sends confirmations.",
+    image: "/Whatsapp booking.png",
+    description:
+      "A conversational WhatsApp AI booking agent built with n8n, WhatsApp, Gemini, OpenAI, Google Calendar, Google Sheets, and Gmail. It handles text and voice messages, collects lead details, checks real availability, books appointments, logs contacts, and emails confirmations with timezone-aware scheduling.",
+    tags: ["n8n", "WhatsApp", "Gemini", "OpenAI", "Google Calendar", "Google Sheets", "Gmail"]
+  },
+  {
+    title: "Lead Generation using Apollo and Apify",
+    category: "AI Automation / Lead Generation",
+    filters: ["AI Automation", "Full-stack"],
+    impact: "n8n workflow that scrapes Apollo leads through Apify, deduplicates contacts, and stores clean records in Airtable.",
+    image: "/Lead generation.png",
+    description:
+      "A lead generation automation built with n8n, Apollo.io, Apify, and Airtable. It triggers targeted Apollo people-search scraping, extracts contact and company fields, removes duplicates by email, stores structured leads in Airtable, and supports daily pagination for scalable outreach workflows.",
+    tags: ["n8n", "Apify", "Apollo.io", "Airtable", "Lead Generation", "Automation"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Lead%20Generation"
+  },
+  {
+    title: "Email Automation - Team of Email AI Agents",
+    category: "AI Automation / Email Agents",
+    filters: ["AI Automation", "Agentic AI"],
+    impact: "Gmail automation system that classifies emails and routes them to specialized AI reply agents.",
+    image: "/Email Automation.png",
+    description:
+      "An AI-powered email management workflow built with n8n, Gmail, OpenAI, Google Calendar, and LangChain. It classifies incoming emails, routes them to support, meeting, inquiry, or follow-up agents, checks calendar availability, labels messages, and creates structured Gmail drafts for review.",
+    tags: ["n8n", "Gmail", "OpenAI", "Google Calendar", "LangChain", "AI Agents"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Email%20Automation"
+  },  {
     title: "Campus Marketplace - Flutter Buy & Sell App",
     category: "Mobile Development",
     filters: ["Mobile", "Full-stack"],
@@ -300,5 +341,10 @@ export const education = {
   note:
     "Studying computer science while building production-style AI engineering projects across RAG, agents, computer vision, automation, backend systems, and cloud deployment."
 };
+
+
+
+
+
 
 
