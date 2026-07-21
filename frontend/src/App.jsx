@@ -173,21 +173,8 @@ function ProjectCard({ project }) {
         <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
       </div>
       <div className="project-body">
-        <div className="project-topline">
-          <p className="project-meta">{project.category}</p>
-          {project.featured ? <span className="featured-badge">Top project</span> : null}
-        </div>
         <h3 className="project-title">{project.title}</h3>
-        {project.impact ? <p className="project-impact">{project.impact}</p> : null}
         <p className="project-description">{project.description}</p>
-
-        {project.points?.length ? (
-          <ul className="project-points">
-            {project.points.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-        ) : null}
 
         <div className="tags">
           {project.tags.map((tag) => (
@@ -200,12 +187,12 @@ function ProjectCard({ project }) {
         <div className="project-actions">
           {project.github ? (
             <a className="button button-primary button-small" href={project.github} target="_blank" rel="noopener">
-              View code
+              Code
             </a>
           ) : null}
           {project.demo ? (
             <a className="button button-secondary button-small" href={project.demo} target="_blank" rel="noopener">
-              Live product
+              Live demo
             </a>
           ) : null}
         </div>

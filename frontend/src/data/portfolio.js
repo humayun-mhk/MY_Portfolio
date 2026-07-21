@@ -1,4 +1,4 @@
-﻿export const profile = {
+export const profile = {
   name: "Muhammad Humayun",
   role: "AI Engineer building production-minded RAG, agentic AI, and computer vision systems.",
   location: "Pakistan",
@@ -32,34 +32,31 @@ export const projects = [
     title: "CareerPilot AI",
     category: "Agentic AI / Full-stack product",
     filters: ["Agentic AI", "RAG", "Full-stack"],
-    impact: "Multi-agent career workflow with evidence verification, tracing, approvals, and exports.",
     image: "/career_Pilot.png",
     description:
-      "A full-stack AI career assistant that analyzes resumes, compares job fit, verifies evidence, generates tailored assets, and tracks applications.",
+      "A full-stack career assistant that analyzes resumes, verifies evidence, tailors applications, and tracks progress through a LangGraph multi-agent workflow.",
     tags: ["React", "FastAPI", "LangGraph", "ChromaDB", "PostgreSQL", "RAG", "Agentic AI"],
     github: "https://github.com/humayun-mhk/CareerPilot-AI",
     demo: "https://careerpilot-ai-frontend-h9kh.onrender.com/"
   },
   {
-    title: "AI Healthcare Appointment & Safe Triage Platform",
+    title: "Healthcare Appointment & Triage",
     category: "Healthcare AI / Full-stack",
     filters: ["RAG", "Full-stack"],
-    impact: "Appointment booking, SMTP notifications, safe triage, policy RAG, dashboards, and audit logs.",
     image: "/Doctor_appointment.png",
     description:
-      "A production-style healthcare appointment system that books appointments, sends SMTP email notifications, and supports safe AI triage, specialty routing, RAG-based policy knowledge, doctor dashboards, admin analytics, human review, and audit logs.",
+      "A healthcare platform for appointment booking, SMTP notifications, safe AI triage, policy RAG, doctor dashboards, and human-reviewed decisions.",
     tags: ["React", "FastAPI", "PostgreSQL", "pgvector", "RAG", "AI Triage", "Appointment Booking", "SMTP Email"],
     github: "https://github.com/humayun-mhk/medical-appointment-triage-ai",
     demo: "https://medical-appointment-triage-ai.vercel.app/"
   },
   {
-    title: "End-to-End Network Security ML Project",
+    title: "Network Security ML Pipeline",
     category: "MLOps / Security ML",
     filters: ["MLOps", "Full-stack", "Machine Learning"],
-    impact: "Production ML pipeline for phishing URL detection with FastAPI, MongoDB, Docker, CI/CD, and AWS deployment.",
     image: "/End_ML_security.png",
     description:
-      "An end-to-end network security ML system that classifies URLs as legitimate or phishing using 31 engineered features. It includes MongoDB ingestion, validation, transformation, model training, evaluation, FastAPI inference, Docker, GitHub Actions, MLflow, AWS ECR/ECS, and production logging.",
+      "An end-to-end phishing URL detection pipeline with feature engineering, MongoDB ingestion, FastAPI inference, MLflow tracking, Docker, CI/CD, and AWS deployment.",
     tags: ["Python", "Scikit-learn", "FastAPI", "MongoDB", "Docker", "AWS ECS/ECR", "MLflow"],
     github: "https://github.com/humayun-mhk/End_to_end_Network_Security_ML_Project"
   },
@@ -67,129 +64,120 @@ export const projects = [
     title: "Multimodal Vision RAG",
     category: "RAG / Computer vision",
     filters: ["RAG", "Computer Vision", "Full-stack"],
-    impact: "Queries PDFs, images, and text documents through semantic retrieval and multimodal reasoning.",
     image: "/Multi_model_Vision.png",
     description:
-      "A multimodal retrieval platform that combines GPT-4o Vision, FAISS semantic search, FastAPI, and a React chat interface to query PDFs, images, and text documents.",
+      "A multimodal retrieval system that uses GPT-4o Vision and FAISS to answer questions grounded in uploaded PDFs, images, and text documents.",
     tags: ["GPT-4o Vision", "FAISS", "FastAPI", "React", "RAG", "Semantic Search"],
     github: "https://github.com/humayun-mhk/multimodal-vision-rag",
     demo: "https://multimodal-vision-rag-dfqh.vercel.app/"
   },
   {
-    title: "AI-Powered Restaurant Automation Workflow",
+    title: "WhatsApp Booking Agent",
+    category: "AI Automation / Appointment Booking",
+    filters: ["AI Automation", "Agentic AI"],
+    image: "/Whatsapp booking.png",
+    description:
+      "A conversational WhatsApp agent that handles text and voice, qualifies leads, checks Google Calendar, books appointments, and sends confirmations.",
+    tags: ["n8n", "WhatsApp", "Gemini", "OpenAI", "Google Calendar", "Google Sheets", "Gmail"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/WhatsApp%20AI%20Appointment%20Booking%20Agent"
+  },
+  {
+    title: "Email AI Agent Team",
+    category: "AI Automation / Email Agents",
+    filters: ["AI Automation", "Agentic AI"],
+    image: "/Email Automation.png",
+    description:
+      "A team of AI agents that classifies Gmail messages, routes them by intent, checks calendar availability, and prepares structured replies for review.",
+    tags: ["n8n", "Gmail", "OpenAI", "Google Calendar", "LangChain", "AI Agents"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Email%20Automation"
+  },
+  {
+    title: "Dental AI Receptionist",
+    category: "AI Automation / Voice Agent",
+    filters: ["AI Automation", "Agentic AI"],
+    image: "/AI Reciptionist.png",
+    description:
+      "A real-time voice receptionist that checks appointment availability, books dental visits, suggests alternative slots, and logs calls through n8n and Vapi.",
+    tags: ["n8n", "Vapi", "OpenAI", "Python", "Airtable", "Webhooks", "Voice AI"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/AI%20Receptionist%20Agent%20for%20Dental%20Clinics"
+  },
+  {
+    title: "Restaurant AI Automation",
     category: "AI Automation / Voice AI",
     filters: ["AI Automation", "Agentic AI", "RAG"],
-    impact: "n8n workflow for restaurant support with voice responses, vector search, bookings, and data automation.",
     image: "/AI_powered_Resturant_n8n.png",
     description:
-      "An AI support and data automation workflow for restaurants built in n8n. It searches Google Drive data files, embeds menu or customer data in Pinecone, uses OpenAI for intelligent search and responses, integrates ElevenLabs voice synthesis, answers customer queries, manages bookings, confirms orders, and escalates to human support when needed.",
+      "An n8n restaurant assistant that combines OpenAI, Pinecone, and ElevenLabs for menu search, voice support, bookings, order confirmations, and human escalation.",
     tags: ["n8n", "OpenAI", "Pinecone", "ElevenLabs", "Google Drive API", "Voice AI", "AI Automation"],
     github: "https://lnkd.in/dZ7HEp9q"
+  },
+  {
+    title: "Lead Generation Automation",
+    category: "AI Automation / Lead Generation",
+    filters: ["AI Automation", "Full-stack"],
+    image: "/Lead generation.png",
+    description:
+      "An n8n pipeline that collects targeted Apollo leads through Apify, removes duplicate contacts, and stores clean outreach records in Airtable.",
+    tags: ["n8n", "Apify", "Apollo.io", "Airtable", "Lead Generation", "Automation"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Lead%20Generation"
+  },
+  {
+    title: "Invoice Processing Automation",
+    category: "AI Automation / Document Processing",
+    filters: ["AI Automation", "Agentic AI"],
+    image: "/AI_Invoice.png",
+    description:
+      "An invoice workflow that extracts PDF data from Gmail, validates structured fields with OpenAI, stores records in Notion, and emails monthly expense summaries.",
+    tags: ["n8n", "OpenAI", "Gmail API", "Google Drive", "PDF Extraction", "Notion", "Structured Output"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Invoce"
   },
   {
     title: "AI Agent Orchestrator",
     category: "AI Automation / Multi-agent",
     filters: ["AI Automation", "Agentic AI"],
-    impact: "n8n multi-agent automation system that routes Telegram text and voice requests to specialized agents.",
     image: "/AI_Orchestrater_Agent.png",
     description:
-      "An n8n-based AI agent orchestration system for Telegram text and voice inputs. It delegates tasks to agents for email, calendar scheduling, contact updates, content creation, web search, and productivity workflows using Gmail, Google Calendar, Supabase, Airtable, Tavily, OpenAI, Gemini, and Telegram.",
+      "A multi-agent n8n system that routes Telegram text and voice requests to specialized agents for email, calendars, contacts, content, and web research.",
     tags: ["n8n", "AI Agents", "Telegram", "OpenAI", "Gemini", "Supabase", "Airtable"],
     github: "https://github.com/humayun-mhk/n8n-automation/tree/main/AI%20Agent%20Orchestrator"
   },
   {
-    title: "AI Social Media Content Creation Automation",
-    category: "AI Automation / Content Creation",
-    filters: ["AI Automation", "Agentic AI"],
-    impact: "n8n workflow that researches campaign topics and generates LinkedIn, Facebook, and blog content.",
-    image: "/AI_Social_Media.png",
-    description:
-      "An AI-powered content automation workflow using n8n, OpenAI, Tavily, and Google Sheets. It researches campaign topics, extracts relevant web content, uses separate AI agents for LinkedIn, Facebook, and blog posts, then writes generated content back to Google Sheets for review and publishing.",
-    tags: ["n8n", "OpenAI", "Tavily API", "Google Sheets", "AI Agents", "HTTP Requests"],
-    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Content%20creation%20facebook%20%2B%20LinkedIn"
-  },
-  {
-    title: "AI Invoice Processing & Monthly Summarizer Automation",
-    category: "AI Automation / Document Processing",
-    filters: ["AI Automation", "Agentic AI"],
-    impact: "n8n workflow that extracts invoice PDFs, stores records in Notion, and generates monthly summaries.",
-    image: "/AI_Invoice.png",
-    description:
-      "An AI-powered invoice automation workflow using n8n, Gmail, Google Drive, OpenAI, and Notion. It detects invoice emails with PDF attachments, extracts invoice text, verifies invoices, parses structured fields and line items, saves records to Notion, calculates monthly totals, categorizes expenses, and sends summary emails.",
-    tags: ["n8n", "OpenAI", "Gmail API", "Google Drive", "PDF Extraction", "Notion", "Structured Output"],
-    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Invoce"
-  },
-  {
-    title: "AI Therapy Assistant â€” Physical Therapy Clinic Automation",
+    title: "Physical Therapy Assistant",
     category: "AI Automation / Clinic Workflow",
     filters: ["AI Automation", "Agentic AI"],
-    impact: "n8n workflow that summarizes therapy call transcripts and sends structured appointment emails.",
     image: "/AI_Nutrition.png",
     description:
-      "An AI-powered therapy clinic automation workflow using n8n, OpenAI Chat Models, AI Agents, webhooks, memory, and Gmail. It summarizes call transcripts, extracts client details, symptoms, appointment times, and notes, then generates structured HTML confirmation emails for clinic staff.",
+      "An AI clinic workflow that summarizes call transcripts, extracts patient and appointment details, and sends structured confirmation emails to staff.",
     tags: ["n8n", "OpenAI", "AI Agents", "Gmail API", "Webhooks", "Window Buffer Memory"],
     github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Nutritionist%2BAI%2BAgenT"
   },
   {
-    title: "AI Receptionist Agent for Dental Clinics",
-    category: "AI Automation / Voice Agent",
+    title: "Social Media Content Automation",
+    category: "AI Automation / Content Creation",
     filters: ["AI Automation", "Agentic AI"],
-    impact: "Vapi voice receptionist that checks slots, books appointments, suggests alternatives, and logs calls.",
-    image: "/AI Reciptionist.png",
+    image: "/AI_Social_Media.png",
     description:
-      "A real-time voice AI receptionist for dental clinics built with n8n, Vapi, OpenAI, Python, and Airtable. It receives call data through webhooks, checks live appointment availability, books open slots, suggests alternatives when needed, logs calls for analytics, and returns structured responses back to Vapi.",
-    tags: ["n8n", "Vapi", "OpenAI", "Python", "Airtable", "Webhooks", "Voice AI"]
+      "An n8n workflow that researches campaign topics and uses dedicated AI agents to create LinkedIn, Facebook, and blog content stored in Google Sheets.",
+    tags: ["n8n", "OpenAI", "Tavily API", "Google Sheets", "AI Agents", "HTTP Requests"],
+    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Content%20creation%20facebook%20%2B%20LinkedIn"
   },
   {
-    title: "WhatsApp AI Appointment Booking Agent",
-    category: "AI Automation / Appointment Booking",
-    filters: ["AI Automation", "Agentic AI"],
-    impact: "WhatsApp booking assistant that qualifies leads, checks calendar availability, books meetings, and sends confirmations.",
-    image: "/Whatsapp booking.png",
-    description:
-      "A conversational WhatsApp AI booking agent built with n8n, WhatsApp, Gemini, OpenAI, Google Calendar, Google Sheets, and Gmail. It handles text and voice messages, collects lead details, checks real availability, books appointments, logs contacts, and emails confirmations with timezone-aware scheduling.",
-    tags: ["n8n", "WhatsApp", "Gemini", "OpenAI", "Google Calendar", "Google Sheets", "Gmail"]
-  },
-  {
-    title: "Lead Generation using Apollo and Apify",
-    category: "AI Automation / Lead Generation",
-    filters: ["AI Automation", "Full-stack"],
-    impact: "n8n workflow that scrapes Apollo leads through Apify, deduplicates contacts, and stores clean records in Airtable.",
-    image: "/Lead generation.png",
-    description:
-      "A lead generation automation built with n8n, Apollo.io, Apify, and Airtable. It triggers targeted Apollo people-search scraping, extracts contact and company fields, removes duplicates by email, stores structured leads in Airtable, and supports daily pagination for scalable outreach workflows.",
-    tags: ["n8n", "Apify", "Apollo.io", "Airtable", "Lead Generation", "Automation"],
-    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Lead%20Generation"
-  },
-  {
-    title: "Email Automation - Team of Email AI Agents",
-    category: "AI Automation / Email Agents",
-    filters: ["AI Automation", "Agentic AI"],
-    impact: "Gmail automation system that classifies emails and routes them to specialized AI reply agents.",
-    image: "/Email Automation.png",
-    description:
-      "An AI-powered email management workflow built with n8n, Gmail, OpenAI, Google Calendar, and LangChain. It classifies incoming emails, routes them to support, meeting, inquiry, or follow-up agents, checks calendar availability, labels messages, and creates structured Gmail drafts for review.",
-    tags: ["n8n", "Gmail", "OpenAI", "Google Calendar", "LangChain", "AI Agents"],
-    github: "https://github.com/humayun-mhk/n8n-automation/tree/main/Email%20Automation"
-  },  {
-    title: "Campus Marketplace - Flutter Buy & Sell App",
+    title: "Campus Marketplace",
     category: "Mobile Development",
     filters: ["Mobile", "Full-stack"],
-    impact: "Realtime campus marketplace with auth, listings, image upload, search, and seller communication.",
     image: "/Campus_market_place.png",
     description:
-      "A full-featured campus marketplace app built with Flutter and Firebase, enabling students to buy and sell items with real-time listings, image uploads, authentication, and direct seller communication.",
+      "A Flutter and Firebase marketplace where students can publish listings, upload images, search items, manage profiles, and contact sellers in real time.",
     tags: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Firebase Storage", "Image Picker"],
     github: "https://github.com/humayun-mhk/campus-marketplace"
   },
   {
-    title: "TrafficIQ Traffic Detection System",
+    title: "TrafficIQ",
     category: "Computer vision",
     filters: ["Computer Vision", "Full-stack"],
-    impact: "Realtime detection, tracking, counting, WebSocket streams, and lane-level analytics.",
     image: "/Gemini_Generated_Image_occs0ioccs0ioccs.png",
     description:
-      "Real-time vehicle detection, tracking, and counting with YOLOv8, WebSocket video streams, FastAPI services, and a multi-lane analytics dashboard.",
+      "A real-time vehicle detection, tracking, and counting platform using YOLOv8, OpenCV, FastAPI, WebSocket streams, and lane-level analytics.",
     tags: ["YOLOv8", "OpenCV", "FastAPI", "WebSockets", "Python"],
     github: "https://github.com/humayun-mhk/TrafficIQ-End-to-End-Traffic-Detection-System"
   },
@@ -197,21 +185,19 @@ export const projects = [
     title: "Medical RAG Chatbot",
     category: "RAG / AWS",
     filters: ["RAG", "MLOps"],
-    impact: "Medical QA with vector search, Docker, and AWS deployment preparation.",
     image: "/Gemini_Generated_Image_4ap58h4ap58h4ap5 (1).png",
     description:
-      "Medical QA chatbot using LangChain, OpenAI, and Pinecone vector search. Containerized with Docker and prepared for AWS ECR/EC2 deployment.",
+      "A medical question-answering assistant grounded in Pinecone vector search, built with LangChain and OpenAI and containerized for AWS deployment.",
     tags: ["LangChain", "OpenAI", "Pinecone", "Docker", "AWS EC2/ECR"],
     github: "https://github.com/humayun-mhk/Medical-Chatbot-RAG-LLM"
   },
   {
-    title: "FraudShield Fraud Detection",
+    title: "FraudShield",
     category: "ML pipeline",
     filters: ["MLOps", "Full-stack", "Machine Learning"],
-    impact: "Fraud model pipeline with class balancing, drift monitoring, API service, and analytics dashboard.",
     image: "/Gemini_Generated_Image_cqk43kcqk43kcqk4.png",
     description:
-      "Real-time credit card fraud detection pipeline with SMOTE class balancing, model drift monitoring, FastAPI services, and a Streamlit dashboard.",
+      "A real-time credit card fraud detection pipeline with class balancing, drift monitoring, FastAPI inference, and an interactive analytics dashboard.",
     tags: ["Random Forest", "SMOTE", "FastAPI", "Streamlit", "Plotly"],
     github: "https://github.com/humayun-mhk/-FraudShield-Real-Time-Credit-Card-Fraud-Detection"
   },
@@ -219,32 +205,29 @@ export const projects = [
     title: "Real-Time Face Recognition",
     category: "Computer vision",
     filters: ["Computer Vision", "Full-stack"],
-    impact: "Realtime identity workflow with detection, embeddings, WebSockets, and REST identity APIs.",
     image: "/Gemini_Generated_Image_tj6spytj6spytj6s.png",
     description:
-      "End-to-end face detection and recognition using YOLOv8, FaceNet, and MTCNN, with Flask-SocketIO and REST APIs for identity management.",
+      "An identity system combining YOLOv8, FaceNet, and MTCNN with live WebSocket updates and REST APIs for identity management.",
     tags: ["YOLOv8", "FaceNet", "MTCNN", "Flask", "WebSockets"],
     github: "https://github.com/humayun-mhk/-Real-Time-Face-Recognition-System"
   },
   {
-    title: "Eye Disease Classification using EfficientNetB3",
+    title: "Eye Disease Classification",
     category: "Computer Vision / Deep Learning",
     filters: ["Computer Vision", "Machine Learning"],
-    impact: "Retinal image classifier for Normal, Diabetic Retinopathy, Cataract, and Glaucoma using EfficientNetB3 transfer learning.",
     image: "/Eye_disease.png",
     description:
-      "A deep learning project for automated retinal image classification across four disease categories. It uses EfficientNetB3 pretrained on ImageNet, data augmentation, TensorFlow/Keras, and a 4,217-image dataset split into train, validation, and test sets.",
+      "An EfficientNetB3 transfer-learning model that classifies retinal images as normal, diabetic retinopathy, cataract, or glaucoma.",
     tags: ["EfficientNetB3", "TensorFlow", "Keras", "OpenCV", "Transfer Learning", "Medical AI"],
     github: "https://github.com/humayun-mhk/Eye-Disease-Classification-using-EfficientNetB3#%EF%B8%8F-eye-disease-classification-using-efficientnetb3"
   },
   {
-    title: "AI Digital Twin System",
+    title: "AI Digital Twin",
     category: "Generative AI",
     filters: ["Agentic AI", "Full-stack", "MLOps"],
-    impact: "Memory-enhanced LLM system with AWS Bedrock, infrastructure automation, and web delivery.",
     image: "/AI_Digital_Twin.png",
     description:
-      "Memory-enhanced LLM system on AWS Bedrock that replicates personality patterns, with FastAPI services, Terraform infrastructure, Next.js, and CloudFront.",
+      "A memory-enhanced digital twin built on AWS Bedrock with FastAPI services, Terraform infrastructure, Next.js, and CloudFront delivery.",
     tags: ["AWS Bedrock", "FastAPI", "Terraform", "Next.js", "CloudFront"],
     github: "https://github.com/humayun-mhk/my-ai-twin-orchestrator"
   },
@@ -252,21 +235,19 @@ export const projects = [
     title: "NLP Deep Learning Projects",
     category: "NLP / Deep learning",
     filters: ["RAG"],
-    impact: "Deep learning NLP experiments for classification, suggestions, and evaluation workflows.",
     image: "/Gemini_Generated_Image_wo01cpwo01cpwo01.png",
     description:
-      "Text suggestion and fake news detection projects using LSTM-based models, TensorFlow, NumPy, and Streamlit interfaces for evaluation.",
+      "A collection of LSTM-based NLP systems for text suggestions and fake-news classification with TensorFlow and evaluation interfaces.",
     tags: ["TensorFlow", "LSTM", "NumPy", "Streamlit"],
     github: "https://github.com/humayun-mhk/Deep-Learning-Projects"
   },
   {
-    title: "AWS SageMaker End-to-End ML",
+    title: "AWS SageMaker ML Pipeline",
     category: "MLOps / AWS",
     filters: ["MLOps", "Machine Learning"],
-    impact: "Cloud ML workflow from data processing to deployed SageMaker inference endpoint.",
     image: "/Gemini_Generated_Image_i5axpki5axpki5ax.png",
     description:
-      "Full ML workflow from data processing to deployed inference endpoint on SageMaker, designed around a production-style cloud MLOps workflow.",
+      "A production-style cloud ML workflow covering data preparation, model training, evaluation, and deployment to a SageMaker inference endpoint.",
     tags: ["AWS SageMaker", "Scikit-learn", "Pandas", "NumPy"],
     github: "https://github.com/humayun-mhk/aws-sagemaker-end-to-end-ml"
   },
@@ -341,10 +322,3 @@ export const education = {
   note:
     "Studying computer science while building production-style AI engineering projects across RAG, agents, computer vision, automation, backend systems, and cloud deployment."
 };
-
-
-
-
-
-
-
