@@ -29,6 +29,15 @@ export const projectFilters = [
 
 export const projects = [
   {
+    title: "TripMate AI",
+    category: "Agentic AI / MCP Travel Planner",
+    filters: ["Agentic AI", "Full-stack", "MLOps"],
+    image: "/TRIP_MCP!.png",
+    description:
+      "A multi-agent travel planner using MCP, LangGraph, FastAPI, React, and PostgreSQL to research flights, hotels, weather, itineraries, and trip costs.",
+    tags: ["MCP", "LangGraph", "FastAPI", "React", "OpenAI", "PostgreSQL", "Docker", "AWS ECS"]
+  },
+  {
     title: "CareerPilot AI",
     category: "Agentic AI / Full-stack product",
     filters: ["Agentic AI", "RAG", "Full-stack"],
