@@ -35,7 +35,9 @@ export const projects = [
     image: "/TRIP_MCP!.png",
     description:
       "A multi-agent travel planner using MCP, LangGraph, FastAPI, React, and PostgreSQL to research flights, hotels, weather, itineraries, and trip costs.",
-    tags: ["MCP", "LangGraph", "FastAPI", "React", "OpenAI", "PostgreSQL", "Docker", "AWS ECS"]
+    tags: ["MCP", "LangGraph", "FastAPI", "React", "OpenAI", "PostgreSQL", "Docker", "AWS ECS"],
+    github: "https://github.com/humayun-mhk/TripMate-AI-Using-MCP",
+    demo: "https://tr-4b115aaac7044734884dabc94c94ccd7.ecs.eu-north-1.on.aws/"
   },
   {
     title: "CareerPilot AI",
