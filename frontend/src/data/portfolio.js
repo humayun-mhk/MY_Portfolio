@@ -6,7 +6,7 @@ export const profile = {
   intro:
     "I design full-stack AI products that connect real user workflows with LLMs, retrieval systems, computer vision, backend APIs, and deployment-ready engineering.",
   resume: "/Resume.pdf",
-  portrait: "/WhatsApp Image 2025-04-09 at 2.54.06 PM.jpeg",
+  portrait: "/Humyun P.png",
   email: "humayunkhann47@gmail.com",
   phone: "+92 314 081 8147",
   github: "https://github.com/humayun-mhk",
