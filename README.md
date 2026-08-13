@@ -1,4 +1,4 @@
-﻿---
+---
 title: Humayun Portfolio Chatbot Backend
 emoji: 🤖
 colorFrom: blue
@@ -15,7 +15,7 @@ FastAPI backend for the portfolio RAG chatbot.
 ## Endpoints
 
 - `GET /` - service status
-- `GET /health` - health check and OpenAI configuration status
+- `GET /health` - health check and Gemini configuration status
 - `POST /chat` - portfolio chatbot endpoint
 
 ## Hugging Face Secrets
@@ -23,9 +23,9 @@ FastAPI backend for the portfolio RAG chatbot.
 Add these in the Space settings:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key
-OPENAI_MODEL=gpt-4o-mini
+GOOGLE_API_KEY=your_google_api_key
+GEMINI_MODEL=gemini-3.6-flash
 ALLOWED_ORIGINS=https://your-vercel-domain.vercel.app,http://localhost:5173
 ```
 
-`OPENAI_MODEL` and `ALLOWED_ORIGINS` are optional.
+`GEMINI_MODEL` and `ALLOWED_ORIGINS` are optional.

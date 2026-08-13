@@ -12,8 +12,8 @@ except ImportError:
     from rag import build_context_prompt, build_fallback_answer, retrieve_context
 
 
-OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
-DEFAULT_MODEL = "gpt-4o-mini"
+GEMINI_API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
+DEFAULT_GEMINI_MODEL = "gemini-3.6-flash"
 
 
 class ChatMessage(BaseModel):
@@ -33,7 +33,7 @@ class Source(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
-    mode: Literal["openai", "fallback"]
+    mode: Literal["gemini", "fallback"]
     sources: list[Source]
 
 
@@ -50,8 +50,8 @@ def get_allowed_origins() -> list[str]:
 
 app = FastAPI(
     title="Humayun Portfolio RAG Chatbot",
-    version="1.0.0",
-    description="FastAPI backend for the portfolio chatbot with lightweight RAG and OpenAI.",
+    version="1.1.0",
+    description="FastAPI backend for the portfolio chatbot with lightweight RAG and Gemini.",
 )
 
 app.add_middleware(
@@ -71,61 +71,68 @@ def latest_user_message(messages: list[ChatMessage]) -> str:
     return ""
 
 
-def extract_output_text(payload: dict) -> str:
-    if isinstance(payload.get("output_text"), str) and payload["output_text"].strip():
-        return payload["output_text"].strip()
+def gemini_role(role: str) -> str:
+    return "model" if role == "assistant" else "user"
 
-    parts = []
-    for item in payload.get("output", []):
-        for content in item.get("content", []):
-            text = content.get("text") or content.get("output_text")
-            if isinstance(text, str):
-                parts.append(text)
+
+def extract_gemini_text(payload: dict) -> str:
+    parts: list[str] = []
+    for candidate in payload.get("candidates", []):
+        content = candidate.get("content", {})
+        for part in content.get("parts", []):
+            text = part.get("text")
+            if isinstance(text, str) and text.strip():
+                parts.append(text.strip())
     return "\n".join(parts).strip()
 
 
-async def call_openai(messages: list[ChatMessage], context: str) -> str | None:
-    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+async def call_gemini(messages: list[ChatMessage], context: str) -> str | None:
+    api_key = os.getenv("GOOGLE_API_KEY", "").strip()
     if not api_key:
         return None
 
-    model = os.getenv("OPENAI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
-    input_messages = [
+    model = os.getenv("GEMINI_MODEL", DEFAULT_GEMINI_MODEL).strip() or DEFAULT_GEMINI_MODEL
+    url = f"{GEMINI_API_BASE_URL}/{model}:generateContent"
+    system_prompt = (
+        "You are Humayun's portfolio assistant. Answer recruiters and visitors using only "
+        "the retrieved portfolio context. Be concise, specific, honest, and professional. "
+        "If the answer is not in the context, say you do not have that detail and suggest "
+        "contacting Humayun. Mention links only when relevant.\n\n"
+        f"Retrieved portfolio context:\n{context}"
+    )
+    contents = [
         {
-            "role": "developer",
-            "content": (
-                "You are Humayun's portfolio assistant. Answer recruiters and visitors using only "
-                "the retrieved portfolio context. Be concise, specific, honest, and professional. "
-                "If the answer is not in the context, say you do not have that detail and suggest "
-                "contacting Humayun. Mention links only when relevant.\n\n"
-                f"Retrieved portfolio context:\n{context}"
-            ),
-        },
-        *[message.model_dump() for message in messages],
+            "role": gemini_role(message.role),
+            "parts": [{"text": message.content}],
+        }
+        for message in messages
     ]
 
     async with httpx.AsyncClient(timeout=35) as client:
         response = await client.post(
-            OPENAI_RESPONSES_URL,
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-            },
+            url,
+            params={"key": api_key},
+            headers={"Content-Type": "application/json"},
             json={
-                "model": model,
-                "input": input_messages,
-                "max_output_tokens": 500,
-                "temperature": 0.35,
-                "store": False,
+                "systemInstruction": {"parts": [{"text": system_prompt}]},
+                "contents": contents,
+                "generationConfig": {
+                    "temperature": 0.35,
+                    "maxOutputTokens": 500,
+                },
             },
         )
 
-    data = response.json()
+    try:
+        data = response.json()
+    except ValueError:
+        data = {}
+
     if response.status_code >= 400:
-        message = data.get("error", {}).get("message", "OpenAI request failed.")
+        message = data.get("error", {}).get("message", "Gemini request failed.")
         raise RuntimeError(message)
 
-    return extract_output_text(data)
+    return extract_gemini_text(data)
 
 
 @app.get("/")
@@ -138,9 +145,11 @@ def root() -> dict[str, str]:
 
 @app.get("/health")
 def health() -> dict[str, str | bool]:
+    model = os.getenv("GEMINI_MODEL", DEFAULT_GEMINI_MODEL).strip() or DEFAULT_GEMINI_MODEL
     return {
         "status": "ok",
-        "openai_configured": bool(os.getenv("OPENAI_API_KEY", "").strip()),
+        "gemini_configured": bool(os.getenv("GOOGLE_API_KEY", "").strip()),
+        "gemini_model": model,
     }
 
 
@@ -152,12 +161,12 @@ async def chat(request: ChatRequest) -> ChatResponse:
 
     chunks = retrieve_context(question)
     context = build_context_prompt(chunks)
-    mode: Literal["openai", "fallback"] = "openai"
+    mode: Literal["gemini", "fallback"] = "gemini"
 
     try:
-        answer = await call_openai(request.messages, context)
+        answer = await call_gemini(request.messages, context)
     except Exception as exc:
-        print(f"OpenAI call failed: {exc}")
+        print(f"Gemini call failed: {exc}")
         answer = None
 
     if not answer:

@@ -4,7 +4,7 @@ This portfolio uses:
 
 - Vercel for the static frontend.
 - Hugging Face Docker Space for the FastAPI backend.
-- OpenAI API for generation.
+- Google Gemini API for generation.
 - A lightweight portfolio RAG knowledge base in `backend/rag.py`.
 
 ## Files
@@ -25,12 +25,12 @@ Create a new Hugging Face Space:
 3. Add these Space secrets/variables:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key
-OPENAI_MODEL=gpt-4o-mini
+GOOGLE_API_KEY=your_google_api_key
+GEMINI_MODEL=gemini-3.6-flash
 ALLOWED_ORIGINS=https://your-vercel-domain.vercel.app,http://localhost:5173
 ```
 
-`OPENAI_MODEL` and `ALLOWED_ORIGINS` are optional.
+`GEMINI_MODEL` and `ALLOWED_ORIGINS` are optional.
 
 ## Frontend
 
@@ -60,4 +60,4 @@ curl -X POST http://localhost:7860/chat \
 
 ## Notes
 
-If `OPENAI_API_KEY` is missing, the backend still returns a RAG fallback answer instead of breaking.
+If `GOOGLE_API_KEY` is missing, the backend still returns a RAG fallback answer instead of breaking.

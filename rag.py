@@ -394,7 +394,7 @@ def build_context_prompt(chunks: list[PortfolioChunk]) -> str:
 def build_fallback_answer(chunks: list[PortfolioChunk]) -> str:
     context_lines = "\n".join(f"- {chunk.title}: {chunk.content}" for chunk in chunks[:3])
     return (
-        "I can answer from the portfolio knowledge base, but the OpenAI API key is not configured yet.\n\n"
+        "I can answer from the portfolio knowledge base, but the Gemini API key is not configured yet.\n\n"
         f"Relevant context:\n{context_lines}\n\n"
-        "To enable full AI answers, add OPENAI_API_KEY as a Hugging Face Space Secret."
+        "To enable full AI answers, add GOOGLE_API_KEY as a Hugging Face Space Secret."
     )
