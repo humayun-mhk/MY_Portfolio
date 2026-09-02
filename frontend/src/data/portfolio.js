@@ -250,27 +250,7 @@ export const projects = [
       "A memory-enhanced digital twin built on AWS Bedrock with FastAPI services, Terraform infrastructure, Next.js, and CloudFront delivery.",
     tags: ["AWS Bedrock", "FastAPI", "Terraform", "Next.js", "CloudFront"],
     github: "https://github.com/humayun-mhk/my-ai-twin-orchestrator"
-  },
-  {
-    title: "NLP Deep Learning Projects",
-    category: "NLP / Deep learning",
-    filters: ["RAG"],
-    image: "/Gemini_Generated_Image_wo01cpwo01cpwo01.png",
-    description:
-      "A collection of LSTM-based NLP systems for text suggestions and fake-news classification with TensorFlow and evaluation interfaces.",
-    tags: ["TensorFlow", "LSTM", "NumPy", "Streamlit"],
-    github: "https://github.com/humayun-mhk/Deep-Learning-Projects"
-  },
-  {
-    title: "AWS SageMaker ML Pipeline",
-    category: "MLOps / AWS",
-    filters: ["MLOps", "Machine Learning"],
-    image: "/Gemini_Generated_Image_i5axpki5axpki5ax.png",
-    description:
-      "A production-style cloud ML workflow covering data preparation, model training, evaluation, and deployment to a SageMaker inference endpoint.",
-    tags: ["AWS SageMaker", "Scikit-learn", "Pandas", "NumPy"],
-    github: "https://github.com/humayun-mhk/aws-sagemaker-end-to-end-ml"
-  },
+  },
 ];
 
 export const skillGroups = [
