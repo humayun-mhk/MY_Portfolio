@@ -6,11 +6,12 @@ colorTo: gray
 sdk: docker
 app_port: 7860
 pinned: false
----
+--- 
 
-# Humayun Portfolio Chatbot Backend
+#  Humayun Portfolio Chatbot Backend
 
 FastAPI backend for the portfolio RAG chatbot.
+
 
 ## Endpoints
 
