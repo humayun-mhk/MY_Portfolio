@@ -83,6 +83,15 @@ export const projects = [
     demo: "https://multimodal-vision-rag-dfqh.vercel.app/"
   },
   {
+    title: "AgrioCrop AI",
+    category: "Mobile AI / Computer Vision",
+    filters: ["Computer Vision", "Machine Learning", "Mobile"],
+    image: "/AgrioCrop.png",
+    description:
+      "An offline-first Flutter app that runs YOLOv11x plant disease detection and local Qwen chat on-device for low-connectivity farm support.",
+    tags: ["Flutter", "YOLOv11x", "Qwen", "llama.cpp", "ONNX", "Firebase", "Offline AI"],
+    github: "https://github.com/humayun-mhk/agriocrop-plant-disease-ai"
+  },  {
     title: "WhatsApp Booking Agent",
     category: "AI Automation / Appointment Booking",
     filters: ["AI Automation", "Agentic AI"],
